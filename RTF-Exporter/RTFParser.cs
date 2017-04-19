@@ -87,7 +87,7 @@ namespace RTFExporter {
 
         private static string ColorParsing() {
             List<Color> colors = new List<Color>();
-            int j = 0;
+            int j = 1;
 
             for (int i = 0; i < document.colors.Count; i++) {
                 var add = true;
@@ -190,7 +190,7 @@ namespace RTFExporter {
 
                     str += "\\fs" + (2 * text.style.fontSize) + " ";
                     str += "\\f" + fontsIndex[text.style.fontFamily] + " ";
-                    str += "\\fc" + text.style.color.index + " ";
+                    str += "\\cf" + text.style.color.index + " ";
 
                     text.content = text.content.Replace("\n", "\\line ");
                     text.content = text.content.Replace("\t", "\\tab ");
