@@ -47,10 +47,10 @@ namespace RTFExporter {
             str += "}";
 
             switch (document.orientation) {
-                case RTFDocument.Orientation.Landscape:
+                case Orientation.Landscape:
                     str += "\\landscape";
                     break;
-                case RTFDocument.Orientation.Portrait:
+                case Orientation.Portrait:
                     str += "\\portrait";
                     break;
             }
@@ -138,27 +138,27 @@ namespace RTFExporter {
 
             foreach (RTFParagraph paragraph in document.paragraphs) {
                 str += "\\pard";
-                str += "\\sb" + paragraph.spaceBefore;
-                str += "\\sa" + paragraph.spaceAfter;
+                str += "\\sb" + paragraph.style.spaceBefore;
+                str += "\\sa" + paragraph.style.spaceAfter;
 
-                switch (paragraph.alignment) {
-                    case RTFParagraph.Alignment.Left:
+                switch (paragraph.style.alignment) {
+                    case Alignment.Left:
                         str += "\\ql";
                         break;
-                    case RTFParagraph.Alignment.Right:
+                    case Alignment.Right:
                         str += "\\qr";
                         break;
-                    case RTFParagraph.Alignment.Center:
+                    case Alignment.Center:
                         str += "\\qc";
                         break;
-                    case RTFParagraph.Alignment.Justified:
+                    case Alignment.Justified:
                         str += "\\qj";
                         break;
                 }
 
-                str += "\\fi" + value(paragraph.indent.firstLine);
-                str += "\\li" + value(paragraph.indent.left);
-                str += "\\ri" + value(paragraph.indent.right);
+                str += "\\fi" + value(paragraph.style.indent.firstLine);
+                str += "\\li" + value(paragraph.style.indent.left);
+                str += "\\ri" + value(paragraph.style.indent.right);
 
                 foreach (RTFText text in paragraph.text) {
                     str += "\\plain ";
@@ -183,28 +183,28 @@ namespace RTFExporter {
                     }
 
                     switch (text.style.underline) {
-                        case RTFStyle.Underline.Dash:
+                        case Underline.Dash:
                             str += "\\uldash ";
                             break;
-                        case RTFStyle.Underline.DotDash:
+                        case Underline.DotDash:
                             str += "\\uldashd ";
                             break;
-                        case RTFStyle.Underline.Dotted:
+                        case Underline.Dotted:
                             str += "\\uld ";
                             break;
-                        case RTFStyle.Underline.Double:
+                        case Underline.Double:
                             str += "\\uldb ";
                             break;
-                        case RTFStyle.Underline.Thick:
+                        case Underline.Thick:
                             str += "\\ulth ";
                             break;
-                        case RTFStyle.Underline.Basic:
+                        case Underline.Basic:
                             str += "\\ul ";
                             break;
-                        case RTFStyle.Underline.Wave:
+                        case Underline.Wave:
                             str += "\\ulwave ";
                             break;
-                        case RTFStyle.Underline.WordsOnly:
+                        case Underline.WordsOnly:
                             str += "\\ulw ";
                             break;
                     }
@@ -354,13 +354,13 @@ namespace RTFExporter {
             float result = 0;
 
             switch (document.units) {
-                case RTFDocument.Units.Inch:
+                case Units.Inch:
                     result = i * 1440;
                     break;
-                case RTFDocument.Units.Millimeters:
+                case Units.Millimeters:
                     result = (i / 25.4f) * 1440;
                     break;
-                case RTFDocument.Units.Centimeters:
+                case Units.Centimeters:
                     result = (i / 2.54f) * 1440;
                     break;
             }

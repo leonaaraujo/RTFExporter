@@ -4,6 +4,31 @@ using System.Collections.Generic;
 
 namespace RTFExporter {
 
+    public class Margin {
+        public float left;
+        public float right;
+        public float top;
+        public float bottom;
+
+        public Margin(float left, float right, float top, float bottom) {
+            this.left = left;
+            this.right = right;
+            this.top = top;
+            this.bottom = bottom;
+        }
+    }
+
+    public enum Orientation {
+        Landscape,
+        Portrait
+    }
+
+    public enum Units {
+        Inch,
+        Millimeters,
+        Centimeters
+    }
+
     public class RTFDocument : IDisposable {
         public List<RTFParagraph> paragraphs = new List<RTFParagraph>();
         public List<Color> colors = new List<Color>();
@@ -16,32 +41,7 @@ namespace RTFExporter {
         public Units units;
         private FileStream fileStream;
         private StreamWriter streamWriter;
-
-        public struct Margin {
-            public float left;
-            public float right;
-            public float top;
-            public float bottom;
-
-            public Margin(float left, float right, float top, float bottom) {
-                this.left = left;
-                this.right = right;
-                this.top = top;
-                this.bottom = bottom;
-            }
-        }
-
-        public enum Orientation {
-            Landscape,
-            Portrait
-        }
-
-        public enum Units {
-            Inch,
-            Millimeters,
-            Centimeters
-        }
-
+        
         public RTFDocument() {
             Init(8, 11, Orientation.Portrait, Units.Inch);
         }
@@ -91,17 +91,31 @@ namespace RTFExporter {
             return paragraph;
         }
 
-        public RTFParagraph AppendParagraph(RTFParagraph.Alignment alignment) {
-            RTFParagraph paragraph = new RTFParagraph(this, alignment);
+        public RTFParagraph AppendParagraph(RTFParagraphStyle style) {
+            RTFParagraph paragraph = new RTFParagraph(this);
+            paragraph.style = style;
             return paragraph;
         }
 
-        public RTFParagraph AppendParagraph(RTFParagraph.Indent indent) {
-            return AppendParagraph(RTFParagraph.Alignment.Left, indent);
+        public RTFParagraph AppendParagraph(Alignment alignment) {
+            RTFParagraph paragraph = new RTFParagraph(this);
+            paragraph.style = new RTFParagraphStyle(alignment);
+            return paragraph;
         }
 
-        public RTFParagraph AppendParagraph(RTFParagraph.Alignment alignment, RTFParagraph.Indent indent) {
-            RTFParagraph paragraph = new RTFParagraph(this, alignment, indent);
+        public RTFParagraph AppendParagraph(Indent indent) {
+            return AppendParagraph(Alignment.Left, indent);
+        }
+
+        public RTFParagraph AppendParagraph(Alignment alignment, Indent indent) {
+            RTFParagraph paragraph = new RTFParagraph(this);
+            paragraph.style = new RTFParagraphStyle(alignment, indent);
+            return paragraph;
+        }
+
+        public RTFParagraph AppendParagraph(Alignment alignment, Indent indent, int spaceBefore, int spaceAfter) {
+            RTFParagraph paragraph = new RTFParagraph(this);
+            paragraph.style = new RTFParagraphStyle(alignment, indent, spaceBefore, spaceAfter);
             return paragraph;
         }
 

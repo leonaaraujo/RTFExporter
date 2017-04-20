@@ -1,39 +1,39 @@
 ﻿namespace RTFExporter {
     
     public class RTFText {
-        public RTFStyle style;
+        public RTFTextStyle style;
         public string content;
 
         public RTFText(RTFParagraph paragraph, string content) {
-            style = new RTFStyle(false, false, 12, "Calibri", new Color(0, 0, 0));
+            style = new RTFTextStyle(false, false, 12, "Calibri", new Color(0, 0, 0));
             this.content = content;
             paragraph.text.Add(this);
         }
 
-        public RTFText(RTFParagraph paragraph, string content, RTFStyle style) {
+        public RTFText(RTFParagraph paragraph, string content, RTFTextStyle style) {
             this.style = style;
             this.content = content;
             paragraph.text.Add(this);
         }
 
         public RTFText SetStyle() {
-            style = new RTFStyle(false, false, false, false, false, false, 12, "Calibri", Color.black, RTFStyle.Underline.None);
+            style = new RTFTextStyle(false, false, false, false, false, false, 12, "Calibri", Color.black, Underline.None);
             return this;
         }
 
         public RTFText SetStyle(Color color, int fontSize = 12, string fontFamily = "Calibri") {
-            style = new RTFStyle(false, false, fontSize, fontFamily, color);
+            style = new RTFTextStyle(false, false, fontSize, fontFamily, color);
             return this;
         }
 
         public RTFText SetStyle(Color color, bool italic = false, bool bold = false, int fontSize = 12, string fontFamily = "Calibri") {
-            style = new RTFStyle(italic, bold, fontSize, fontFamily, color);
+            style = new RTFTextStyle(italic, bold, fontSize, fontFamily, color);
             return this;
         }
 
-        public RTFText SetStyle(bool italic, bool bold, RTFStyle.Underline underline = RTFStyle.Underline.None,
+        public RTFText SetStyle(bool italic, bool bold, Underline underline = Underline.None,
             bool smallCaps = false, bool strikeThrough = false, bool allCaps = false, bool outline = false) {
-            style = new RTFStyle(italic, bold, smallCaps, strikeThrough, allCaps, outline, 12, "Calibri", Color.black, underline);
+            style = new RTFTextStyle(italic, bold, smallCaps, strikeThrough, allCaps, outline, 12, "Calibri", Color.black, underline);
             return this;
         }
     }
