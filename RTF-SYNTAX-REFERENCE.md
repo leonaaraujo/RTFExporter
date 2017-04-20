@@ -4,6 +4,7 @@
 [https://github.com/jokecamp/RtfWebVisualizer](https://github.com/jokecamp/RtfWebVisualizer)  
 [http://www.pindari.com/rtf1.html](http://www.pindari.com/rtf1.html)  
 [http://www.biblioscape.com/rtf15_spec.htm](http://www.biblioscape.com/rtf15_spec.htm)
+[https://msdn.microsoft.com/en-us/library/office/aa140302](https://msdn.microsoft.com/en-us/library/office/aa140302)
 
 
 ---
@@ -99,8 +100,8 @@ Text
 \cf2Text  
 
 
-cf1 -> all text after this will use the color font 1 of the table  
-cf2 -> all text after this will use the color font 2 of the table  
+cf1 -> all text after this will use the color 1 of the table as foreground  
+cf2 -> all text after this will use the color 2 of the table as foreground  
 
 
 notes:

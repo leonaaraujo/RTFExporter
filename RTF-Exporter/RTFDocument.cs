@@ -41,7 +41,9 @@ namespace RTFExporter {
         public Units units;
         private FileStream fileStream;
         private StreamWriter streamWriter;
-        
+        public int version = 1;
+        public List<string> keywords = new List<string>();
+
         public RTFDocument() {
             Init(8, 11, Orientation.Portrait, Units.Inch);
         }
@@ -133,5 +135,5 @@ namespace RTFExporter {
             Close();
         }
     }
-    
+
 }
