@@ -47,9 +47,13 @@ namespace RTFExporter {
         }
 
         public RTFDocument(string path) {
+            SetFile(path);
+            Init(8, 11, Orientation.Portrait, Units.Inch);
+        }
+
+        public void SetFile(string path) {
             fileStream = new FileStream(path, FileMode.Create);
             streamWriter = new StreamWriter(fileStream);
-            Init(8, 11, Orientation.Portrait, Units.Inch);
         }
 
         public RTFDocument(float width = 8, float height = 11, Orientation orientation = Orientation.Portrait, Units units = Units.Inch) {
@@ -106,8 +110,12 @@ namespace RTFExporter {
             fileStream.Close();
         }
 
-        public void Dispose() {
+        public void Save() {
             streamWriter.Write(RTFParser.ToString(this));
+        }
+
+        public void Dispose() {
+            Save();
             Close();
         }
     }

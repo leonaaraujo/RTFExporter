@@ -6,6 +6,8 @@ namespace RTFExporter {
         public List<RTFText> text = new List<RTFText>();
         public Indent indent;
         public Alignment alignment;
+        public int spaceBefore;
+        public int spaceAfter = 100;
 
         public struct Indent {
             public float firstLine;

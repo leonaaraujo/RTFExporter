@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 
 namespace RTFExporter {
@@ -7,6 +8,20 @@ namespace RTFExporter {
 
         public static RTFDocument document;
         private static Dictionary<string, int> fontsIndex = new Dictionary<string, int>();
+
+        public static void ToFile(string path, RTFDocument document) {
+            document.SetFile(path);
+            document.Save();
+            document.Close();
+        }
+
+        public static void ToFile(string path, string content) {
+            using(FileStream fs = new FileStream(path, FileMode.Create)) {
+                using (StreamWriter writer = new StreamWriter(fs)) {
+                    writer.Write(content);
+                }
+            }
+        }
 
         public static string ToString(RTFDocument document) {
             RTFParser.document = document;
@@ -122,6 +137,9 @@ namespace RTFExporter {
             string str = "";
 
             foreach (RTFParagraph paragraph in document.paragraphs) {
+                str += "\\pard";
+                str += "\\sb" + paragraph.spaceBefore;
+                str += "\\sa" + paragraph.spaceAfter;
 
                 switch (paragraph.alignment) {
                     case RTFParagraph.Alignment.Left:
@@ -153,6 +171,9 @@ namespace RTFExporter {
                     }
                     if (text.style.smallCaps) {
                         str += "\\scaps ";
+                    }
+                    if (text.style.allCaps) {
+                        str += "\\caps ";
                     }
                     if (text.style.strikeThrough) {
                         str += "\\strike ";
@@ -322,9 +343,9 @@ namespace RTFExporter {
 
                     str += text.content;
                 }
-            }
 
-            str += "\\par ";
+                str += "\\par ";
+            }
 
             return str;
         }
