@@ -44,7 +44,7 @@ namespace RTFExporter {
             str += "{\\info {\\author " + document.author + "}";
             DateTime date = DateTime.Now;
             str += "{\\creatim\\yr" + date.Year + "\\mo" + date.Month + "\\dy" + date.Day + "\\hr" + date.Hour + "\\min" + date.Minute + "}";
-            str += "{\\version " + document.version + "}";
+            str += "{\\version" + document.version + "}";
             str += "{\\edmins0}";
             str += "{\\nofpages1}";
             str += "{\\nofwords0}";
@@ -57,7 +57,7 @@ namespace RTFExporter {
                 str += keyword + " ";
             }
 
-            str += "}}";
+            str += "}";
         
             switch (document.orientation) {
                 case Orientation.Landscape:
