@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>RTFExporter</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>RTFExporter</title>
     <authors>Bruno Araujo</authors>
     <owners>lavaleak</owners>
@@ -17,8 +17,8 @@
     <language>C#</language>
   </metadata>
   <files>
-    <file src="README.md" target="" />
-    <file src="LICENSE.md" target="" />
-    <file src="src\*.*" target="" />
+    <file src="README.md" target="content\README.md" />
+    <file src="LICENSE.md" target="content\LICENSE.md" />
+    <file src="bin\RTFExporter.dll" target="lib\{framework name}[{version}]" />
   </files>
 </package>
