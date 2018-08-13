@@ -1,7 +1,7 @@
 namespace RTFExporter
 {
   /// <summary>
-  /// A class to manage rtf colors as rgb values from 0 to 255
+  /// A class to manage RTF colors as rgb values from 0 to 255
   /// </summary>
   public class Color
   {
@@ -21,9 +21,9 @@ namespace RTFExporter
     /// <summary>
     /// Color constructor
     /// </summary>
-    /// <param name="r">red</param>
-    /// <param name="g">green</param>
-    /// <param name="b">blue</param>
+    /// <param name="r">Red</param>
+    /// <param name="g">Green</param>
+    /// <param name="b">Blue</param>
     public Color(byte r, byte g, byte b)
     {
       this.r = r;
@@ -31,5 +31,4 @@ namespace RTFExporter
       this.b = b;
     }
   }
-
 }

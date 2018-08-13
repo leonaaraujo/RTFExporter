@@ -1,7 +1,7 @@
 namespace RTFExporter
 {
   /// <summary>
-  /// The rtf text class, any snippet of text of a paragraph
+  /// The RTF text class, any snippet of text of a paragraph, every text is appended to a paragraph
   /// </summary>
   public class RTFText
   {
@@ -12,8 +12,8 @@ namespace RTFExporter
     /// The text constructor
     /// <seealso cref="RTFExporter.RTFParagraph"/>
     /// </summary>
-    /// <param name="paragraph">the parent paragraph</param>
-    /// <param name="content">the text content itself</param>
+    /// <param name="paragraph">The parent paragraph</param>
+    /// <param name="content">The text content itself</param>
     public RTFText(RTFParagraph paragraph, string content)
     {
       style = new RTFTextStyle(false, false, 12, "Calibri", new Color(0, 0, 0));
@@ -26,9 +26,9 @@ namespace RTFExporter
     /// <seealso cref="RTFExporter.RTFParagraph"/>
     /// <seealso cref="RTFExporter.RTFTextStyle"/>
     /// </summary>
-    /// <param name="paragraph">the parent paragraph</param>
-    /// <param name="content">the text content itself</param>
-    /// <param name="style">a pre-configured style object</param>
+    /// <param name="paragraph">The parent paragraph</param>
+    /// <param name="content">The text content itself</param>
+    /// <param name="style">A pre-configured style object</param>
     public RTFText(RTFParagraph paragraph, string content, RTFTextStyle style)
     {
       this.style = style;
@@ -40,7 +40,7 @@ namespace RTFExporter
     /// Set a default style to the text (Calibri black 12pt)
     /// <seealso cref="RTFExporter.RTFTextStyle"/>
     /// </summary>
-    /// <returns>the RTFText object after style setted</returns>
+    /// <returns>The RTF text object after style setted</returns>
     public RTFText SetStyle()
     {
       style = new RTFTextStyle(false, false, false, false, false, false, 12, "Calibri", Color.black, Underline.None);
@@ -53,9 +53,9 @@ namespace RTFExporter
     /// <seealso cref="RTFExporter.Color"/>
     /// </summary>
     /// <param name="color">The text color</param>
-    /// <param name="fontSize">the font size in pt, 12pt as default</param>
-    /// <param name="fontFamily">a valid font family, will use Calibri if doesn't exist and as default</param>
-    /// <returns>the RTFText object after style setted</returns>
+    /// <param name="fontSize">The font size in pt, 12pt as default</param>
+    /// <param name="fontFamily">A valid font family, will use Calibri if doesn't exist and as default</param>
+    /// <returns>The RTF text object after style setted</returns>
     public RTFText SetStyle(Color color, int fontSize = 12, string fontFamily = "Calibri")
     {
       style = new RTFTextStyle(false, false, fontSize, fontFamily, color);
@@ -68,11 +68,11 @@ namespace RTFExporter
     /// <seealso cref="RTFExporter.Color"/>
     /// </summary>
     /// <param name="color">The text color</param>
-    /// <param name="italic">if the text is italic, false as default</param>
-    /// <param name="bold">if the text is italic, false as default</param>
-    /// <param name="fontSize">the font size in pt, 12pt as default</param>
-    /// <param name="fontFamily">a valid font family, will use Calibri if doesn't exist and as default</param>
-    /// <returns>the RTFText object after style setted</returns>
+    /// <param name="italic">If the text is italic, false as default</param>
+    /// <param name="bold">If the text is italic, false as default</param>
+    /// <param name="fontSize">The font size in pt, 12pt as default</param>
+    /// <param name="fontFamily">A valid font family, will use Calibri if doesn't exist and as default</param>
+    /// <returns>The RTF text object after style setted</returns>
     public RTFText SetStyle(Color color, bool italic = false, bool bold = false, int fontSize = 12, string fontFamily = "Calibri")
     {
       style = new RTFTextStyle(italic, bold, fontSize, fontFamily, color);
@@ -84,13 +84,13 @@ namespace RTFExporter
     /// <seealso cref="RTFExporter.RTFTextStyle"/>
     /// <seealso cref="RTFExporter.Underline"/>
     /// </summary>
-    /// <param name="italic">if the text is italic, false as default</param>
-    /// <param name="bold">if the text is italic, false as default</param>
-    /// <param name="underline">the underline type</param>
-    /// <param name="smallCaps">use all small caps?</param>
-    /// <param name="strikeThrough">use strike through?</param>
-    /// <param name="allCaps">use all caps?</param>
-    /// <param name="outline">has outline?</param>
+    /// <param name="italic">If the text is italic, false as default</param>
+    /// <param name="bold">If the text is italic, false as default</param>
+    /// <param name="underline">The underline type</param>
+    /// <param name="smallCaps">Use all small caps?</param>
+    /// <param name="strikeThrough">Use strike through?</param>
+    /// <param name="allCaps">Use all caps?</param>
+    /// <param name="outline">Has outline?</param>
     /// <returns></returns>
     public RTFText SetStyle(bool italic, bool bold, Underline underline = Underline.None,
       bool smallCaps = false, bool strikeThrough = false, bool allCaps = false, bool outline = false)
@@ -99,5 +99,4 @@ namespace RTFExporter
       return this;
     }
   }
-
 }

@@ -36,11 +36,11 @@ namespace RTFExporter
     /// The simple style constructor
     /// <seealso cref="RTFExporter.Color"/>
     /// </summary>
-    /// <param name="italic">is italic?</param>
-    /// <param name="bold">is bold?</param>
-    /// <param name="fontSize">font size in pt</param>
-    /// <param name="fontFamily">a valid font family, will use Calibri if doesn't exist</param>
-    /// <param name="color">a rgb color to the text</param>
+    /// <param name="italic">Is italic?</param>
+    /// <param name="bold">Is bold?</param>
+    /// <param name="fontSize">Font size in pt</param>
+    /// <param name="fontFamily">A valid font family, will use Calibri if doesn't exist</param>
+    /// <param name="color">A rgb color to the text</param>
     public RTFTextStyle(bool italic, bool bold, int fontSize, string fontFamily, Color color)
     {
       this.italic = italic;
@@ -55,16 +55,16 @@ namespace RTFExporter
     /// <seealso cref="RTFExporter.Color"/>
     /// <seealso cref="RTFExporter.Underline"/>
     /// </summary>
-    /// <param name="italic">is italic?</param>
-    /// <param name="bold">is bold?</param>
-    /// <param name="smallCaps">use all small caps?</param>
-    /// <param name="strikeThrough">use strike through?</param>
-    /// <param name="allCaps">use all caps?</param>
-    /// <param name="outline">has outline?</param>
-    /// <param name="fontSize">font size in pt</param>
-    /// <param name="fontFamily">a valid font family, will use Calibri if doesn't exist</param>
-    /// <param name="color">a rgb color to the text</param>
-    /// <param name="underline">the underline type</param>
+    /// <param name="italic">Is italic?</param>
+    /// <param name="bold">Is bold?</param>
+    /// <param name="smallCaps">Use all small caps?</param>
+    /// <param name="strikeThrough">Use strike through?</param>
+    /// <param name="allCaps">Use all caps?</param>
+    /// <param name="outline">Has outline?</param>
+    /// <param name="fontSize">Font size in pt</param>
+    /// <param name="fontFamily">A valid font family, will use Calibri if doesn't exist</param>
+    /// <param name="color">A rgb color to the text</param>
+    /// <param name="underline">The underline type</param>
     public RTFTextStyle(bool italic, bool bold, bool smallCaps, bool strikeThrough, bool allCaps,
       bool outline, int fontSize, string fontFamily, Color color, Underline underline)
     {
@@ -80,5 +80,4 @@ namespace RTFExporter
       this.underline = underline;
     }
   }
-
 }

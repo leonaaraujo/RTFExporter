@@ -50,8 +50,7 @@ namespace RTFExporter
   }
 
   /// <summary>
-  /// The rtf document, it is the main class and use a IDisposable interface
-  /// <seealso cref="System.IDisposable"/>
+  /// The RTF document, it is the main class and use a IDisposable interface
   /// </summary>
   public class RTFDocument : IDisposable
   {
@@ -69,28 +68,57 @@ namespace RTFExporter
     public int version = 1;
     public List<string> keywords = new List<string>();
 
+    /// <summary>
+    /// The simple RTF Document constructor
+    /// </summary>
     public RTFDocument()
     {
       Init(8, 11, Orientation.Portrait, Units.Inch);
     }
 
+    /// <summary>
+    /// The RTF Document constructor with a file path
+    /// </summary>
+    /// <param name="path">A path to a folder with filename</param>
     public RTFDocument(string path)
     {
       SetFile(path);
       Init(8, 11, Orientation.Portrait, Units.Inch);
     }
 
+    /// <summary>
+    /// Set a file by path and allocate it stream
+    /// </summary>
+    /// <param name="path">A path to a folder with filename</param>
     public void SetFile(string path)
     {
       fileStream = new FileStream(path, FileMode.Create);
       streamWriter = new StreamWriter(fileStream);
     }
 
+    /// <summary>
+    /// RTF document constructor with setup parameters
+    /// <seealso cref="RTFExporter.Orientation">
+    /// <seealso cref="RTFExporter.Units">
+    /// </summary>
+    /// <param name="width">the width of the page</param>
+    /// <param name="height">the height of the page</param>
+    /// <param name="orientation">the page orientation</param>
+    /// <param name="units">the measure units of the page</param>
     public RTFDocument(float width = 8, float height = 11, Orientation orientation = Orientation.Portrait, Units units = Units.Inch)
     {
       Init(width, height, orientation, units);
     }
 
+    /// <summary>
+    /// RTF document init method to use after a simple constructor
+    /// <seealso cref="RTFExporter.Orientation">
+    /// <seealso cref="RTFExporter.Units">
+    /// </summary>
+    /// <param name="width">the width of the page</param>
+    /// <param name="height">the height of the page</param>
+    /// <param name="orientation">the page orientation</param>
+    /// <param name="units">the measure units of the page</param>
     public void Init(float width, float height, Orientation orientation, Units units)
     {
       this.width = width;
@@ -112,6 +140,13 @@ namespace RTFExporter
       }
     }
 
+    /// <summary>
+    /// A method to set the margin of the document
+    /// </summary>
+    /// <param name="left"></param>
+    /// <param name="right"></param>
+    /// <param name="top"></param>
+    /// <param name="bottom"></param>
     public void SetMargin(float left, float right, float top, float bottom)
     {
       margin.left = left;
@@ -120,12 +155,24 @@ namespace RTFExporter
       margin.bottom = bottom;
     }
 
+    /// <summary>
+    /// Append a new paragraph to the document
+    /// <seealso cref="RTFExporter.RTFParagraph">
+    /// </summary>
+    /// <returns>The appended paragraph</returns>
     public RTFParagraph AppendParagraph()
     {
       RTFParagraph paragraph = new RTFParagraph(this);
       return paragraph;
     }
 
+    /// <summary>
+    /// Append a new paragraph to the document
+    /// <seealso cref="RTFExporter.RTFParagraph">
+    /// <seealso cref="RTFExporter.RTFParagraphStyle">
+    /// </summary>
+    /// <param name="style">A paragraph style object</param>
+    /// <returns>The appended paragraph</returns>
     public RTFParagraph AppendParagraph(RTFParagraphStyle style)
     {
       RTFParagraph paragraph = new RTFParagraph(this);
@@ -133,6 +180,13 @@ namespace RTFExporter
       return paragraph;
     }
 
+    /// <summary>
+    /// Append a new paragraph to the document
+    /// <seealso cref="RTFExporter.RTFParagraph">
+    /// <seealso cref="RTFExporter.Alignment">
+    /// </summary>
+    /// <param name="alignment">A paragraph alignment object</param>
+    /// <returns>The appended paragraph</returns>
     public RTFParagraph AppendParagraph(Alignment alignment)
     {
       RTFParagraph paragraph = new RTFParagraph(this);
@@ -140,11 +194,27 @@ namespace RTFExporter
       return paragraph;
     }
 
+    /// <summary>
+    /// Append a new paragraph to the document
+    /// <seealso cref="RTFExporter.RTFParagraph">
+    /// <seealso cref="RTFExporter.Indent">
+    /// </summary>
+    /// <param name="indent">A paragraph indent object</param>
+    /// <returns>The appended paragraph</returns>
     public RTFParagraph AppendParagraph(Indent indent)
     {
       return AppendParagraph(Alignment.Left, indent);
     }
 
+    /// <summary>
+    /// 
+    /// <seealso cref="RTFExporter.RTFParagraph">
+    /// <seealso cref="RTFExporter.Alignment">
+    /// <seealso cref="RTFExporter.Indent">
+    /// </summary>
+    /// <param name="alignment">A paragraph alignment object</param>
+    /// <param name="indent">A paragraph indent object</param>
+    /// <returns>The appended paragraph</returns>
     public RTFParagraph AppendParagraph(Alignment alignment, Indent indent)
     {
       RTFParagraph paragraph = new RTFParagraph(this);
@@ -152,6 +222,17 @@ namespace RTFExporter
       return paragraph;
     }
 
+    /// <summary>
+    /// Append a new paragraph to the document
+    /// <seealso cref="RTFExporter.RTFParagraph">
+    /// <seealso cref="RTFExporter.Alignment">
+    /// <seealso cref="RTFExporter.Indent">
+    /// </summary>
+    /// <param name="alignment">A paragraph alignment object</param>
+    /// <param name="indent">A paragraph indent object</param>
+    /// <param name="spaceBefore">The value of the vertical space before the paragraph</param>
+    /// <param name="spaceAfter">The value of the vertical space after the paragraph</param>
+    /// <returns>The appended paragraph</returns>
     public RTFParagraph AppendParagraph(Alignment alignment, Indent indent, int spaceBefore, int spaceAfter)
     {
       RTFParagraph paragraph = new RTFParagraph(this);
@@ -159,22 +240,30 @@ namespace RTFExporter
       return paragraph;
     }
 
+    /// <summary>
+    /// Close the streams (StreamWriter, FileStream)
+    /// </summary>
     public void Close()
     {
       streamWriter.Close();
       fileStream.Close();
     }
 
+    /// <summary>
+    /// Save the values to the file
+    /// </summary>
     public void Save()
     {
       streamWriter.Write(RTFParser.ToString(this));
     }
 
+    /// <summary>
+    /// The dispose routine. It save and close the streams (StreamWriter, FileStream)
+    /// </summary>
     public void Dispose()
     {
       Save();
       Close();
     }
   }
-
 }

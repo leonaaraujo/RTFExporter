@@ -12,9 +12,9 @@ namespace RTFExporter
     /// <summary>
     /// The paragraph indent constructor
     /// </summary>
-    /// <param name="firstLine">a space in the first line</param>
-    /// <param name="left">a space in the left of the block</param>
-    /// <param name="right">a space in the right of the block</param>
+    /// <param name="firstLine">A space in the first line</param>
+    /// <param name="left">A space in the left of the block</param>
+    /// <param name="right">A space in the right of the block</param>
     public Indent(float firstLine, float left, float right)
     {
       this.firstLine = firstLine;
@@ -24,7 +24,7 @@ namespace RTFExporter
   }
 
   /// <summary>
-  /// The alignment type
+  /// The text alignment type
   /// </summary>
   public enum Alignment
   {
@@ -45,17 +45,38 @@ namespace RTFExporter
     public int spaceBefore;
     public int spaceAfter = 100;
 
+    /// <summary>
+    /// RTF paragraph style constructor with just alignment
+    /// <seealso cref="RTFExporter.Alignment">
+    /// </summary>
+    /// <param name="alignment">Alignment object</param>
     public RTFParagraphStyle(Alignment alignment)
     {
       this.alignment = alignment;
     }
 
+    /// <summary>
+    /// RTF paragraph style constructor with just alignment and indent
+    /// <seealso cref="RTFExporter.Alignment">
+    /// <seealso cref="RTFExporter.Indent">
+    /// </summary>
+    /// <param name="alignment">Alignment object</param>
+    /// <param name="indent">Indent object</param>
     public RTFParagraphStyle(Alignment alignment, Indent indent)
     {
       this.alignment = alignment;
       this.indent = indent;
     }
 
+    /// <summary>
+    /// RTF paragraph style constructor complete
+    /// <seealso cref="RTFExporter.Alignment">
+    /// <seealso cref="RTFExporter.Indent">
+    /// </summary>
+    /// <param name="alignment">Alignment object</param>
+    /// <param name="indent">Indent object</param>
+    /// <param name="spaceBefore">Space vertical before paragraph</param>
+    /// <param name="spaceAfter">Space vertical after paragraph</param>
     public RTFParagraphStyle(Alignment alignment, Indent indent, int spaceBefore, int spaceAfter)
     {
       this.alignment = alignment;
@@ -64,6 +85,11 @@ namespace RTFExporter
       this.spaceAfter = spaceAfter;
     }
 
+    /// <summary>
+    /// RTF paragraph style constructor with parent document
+    /// <seealso cref="RTFExporter.RTFDocument">
+    /// </summary>
+    /// <param name="document">The RTF document to append the paragraph</param>
     public RTFParagraphStyle(RTFDocument document)
     {
       switch (document.units)
@@ -80,5 +106,4 @@ namespace RTFExporter
       }
     }
   }
-
 }

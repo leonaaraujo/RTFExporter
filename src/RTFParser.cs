@@ -5,7 +5,7 @@ using System.IO;
 namespace RTFExporter
 {
   /// <summary>
-  /// The rtf parser class, it transform the rtfdocument into a file or string
+  /// The RTF parser class, it transform the RTFdocument into a file or string
   /// </summary>
   public class RTFParser
   {
@@ -13,11 +13,11 @@ namespace RTFExporter
     private static Dictionary<string, int> fontsIndex = new Dictionary<string, int>();
 
     /// <summary>
-    /// Create or rewrite a file with rtf content
+    /// Create or rewrite a file with RTF content
     /// <seealso cref="RTExporter.RTFDocument">
     /// </summary>
-    /// <param name="path">the folder path with filename</param>
-    /// <param name="document">the rtf document to save</param>
+    /// <param name="path">The folder path with filename</param>
+    /// <param name="document">The RTF document to save</param>
     public static void ToFile(string path, RTFDocument document)
     {
       document.SetFile(path);
@@ -28,8 +28,8 @@ namespace RTFExporter
     /// <summary>
     /// Write a content straight to a file
     /// </summary>
-    /// <param name="path">the folder path with filename</param>
-    /// <param name="document">the file content</param>
+    /// <param name="path">The folder path with filename</param>
+    /// <param name="document">The file content</param>
     public static void ToFile(string path, string content)
     {
       using(FileStream fs = new FileStream(path, FileMode.Create))
@@ -42,11 +42,11 @@ namespace RTFExporter
     }
 
     /// <summary>
-    /// Return a rich text formatted string from a rtf document object
+    /// Return a rich text formatted string from a RTF document object
     /// <seealso cref="RTExporter.RTFDocument">
     /// </summary>
-    /// <param name="document">the rtf document to be formatted</param>
-    /// <returns>a rich text formatted string</returns>
+    /// <param name="document">The RTF document to be formatted</param>
+    /// <returns>A rich text formatted string</returns>
     public static string ToString(RTFDocument document)
     {
       RTFParser.document = document;
