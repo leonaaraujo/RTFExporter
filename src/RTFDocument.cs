@@ -69,7 +69,7 @@ namespace RTFExporter
     public List<string> keywords = new List<string>();
 
     /// <summary>
-    /// The simple RTF Document constructor
+    /// The simple RTF Document constructor without use streams
     /// </summary>
     public RTFDocument()
     {
@@ -79,7 +79,7 @@ namespace RTFExporter
     /// <summary>
     /// The RTF Document constructor with a file path
     /// </summary>
-    /// <param name="path">A path to a folder with filename</param>
+    /// <param name="path">A path to a folder with file name</param>
     public RTFDocument(string path)
     {
       SetFile(path);
@@ -87,13 +87,45 @@ namespace RTFExporter
     }
 
     /// <summary>
-    /// Set a file by path and allocate it stream
+    /// The RTF Document constructor with a file stream
     /// </summary>
-    /// <param name="path">A path to a folder with filename</param>
-    public void SetFile(string path)
+    /// <param name="fileStream">A file stream</param>
+    public RTFDocument(FileStream fileStream)
     {
-      fileStream = new FileStream(path, FileMode.Create);
-      streamWriter = new StreamWriter(fileStream);
+      SetStream(fileStream);
+      Init(8, 11, Orientation.Portrait, Units.Inch);
+    }
+
+    /// <summary>
+    /// RTF document constructor with setup parameters
+    /// <seealso cref="RTFExporter.Orientation">
+    /// <seealso cref="RTFExporter.Units">
+    /// </summary>
+    /// <param name="path">A path to a folder with file name</param>
+    /// <param name="width">the width of the page</param>
+    /// <param name="height">the height of the page</param>
+    /// <param name="orientation">the page orientation</param>
+    /// <param name="units">the measure units of the page</param>
+    public RTFDocument(string path, float width = 8, float height = 11, Orientation orientation = Orientation.Portrait, Units units = Units.Inch)
+    {
+      SetFile(path);
+      Init(width, height, orientation, units);
+    }
+
+    /// <summary>
+    /// RTF document constructor with setup parameters without use streams
+    /// <seealso cref="RTFExporter.Orientation">
+    /// <seealso cref="RTFExporter.Units">
+    /// </summary>
+    /// <param name="fileStream">A file stream</param>
+    /// <param name="width">the width of the page</param>
+    /// <param name="height">the height of the page</param>
+    /// <param name="orientation">the page orientation</param>
+    /// <param name="units">the measure units of the page</param>
+    public RTFDocument(FileStream fileStream, float width = 8, float height = 11, Orientation orientation = Orientation.Portrait, Units units = Units.Inch)
+    {
+      SetStream(fileStream);
+      Init(width, height, orientation, units);
     }
 
     /// <summary>
@@ -108,6 +140,26 @@ namespace RTFExporter
     public RTFDocument(float width = 8, float height = 11, Orientation orientation = Orientation.Portrait, Units units = Units.Inch)
     {
       Init(width, height, orientation, units);
+    }
+
+    /// <summary>
+    /// Set a file by path and allocate it stream
+    /// </summary>
+    /// <param name="path">A path to a folder with file name</param>
+    public void SetFile(string path)
+    {
+      fileStream = new FileStream(path, FileMode.Create);
+      streamWriter = new StreamWriter(fileStream);
+    }
+
+    /// <summary>
+    /// Use a file stream directly
+    /// </summary>
+    /// <param name="fileStream">A file stream</param>
+    public void SetStream(FileStream fileStream)
+    {
+      this.fileStream = fileStream;
+      streamWriter = new StreamWriter(fileStream);
     }
 
     /// <summary>
@@ -262,8 +314,11 @@ namespace RTFExporter
     /// </summary>
     public void Dispose()
     {
-      Save();
-      Close();
+      if (fileStream != null && streamWriter != null)
+      {
+        Save();
+        Close();
+      }
     }
   }
 }
