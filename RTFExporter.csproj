@@ -1,18 +1,27 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <AssemblyName>RTFExporter</AssemblyName>
-    <RootNamespace>RTFExporter</RootNamespace>
-    <Description>A C# library to generate .RTF text files from any string object data, stylized and ready for any text processor. No fancy dependencies or restrictive licenses.</Description>
-    <PackageLicenseUrl>https://github.com/leonaaraujo/RTFExporter/blob/master/LICENSE.md</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/leonaaraujo/RTFExporter</PackageProjectUrl>
-    <PackageReleaseNotes>Ported to .NET standard 2.0.</PackageReleaseNotes>
-    <RepositoryUrl>https://github.com/leonaaraujo/RTFExporter</RepositoryUrl>
-    <Version>1.1.1</Version>
-    <Authors>Leona Araujo</Authors>
-    <Company>lavaleak</Company>
-    <PackageTags>rtf rich text doc docx word string</PackageTags>
-    <Copyright>Copyright 2017-2018 Leona Araujo araujo.contato@gmail.com</Copyright>
-  </PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <AssemblyName>RTFExporter</AssemblyName>
+        <RootNamespace>RTFExporter</RootNamespace>
+        <PackageId>RTFExporter</PackageId>
+        <Title>RTFExporter</Title>
+        <Version>1.1.3</Version>
+        <Authors>Leona Araujo</Authors>
+        <Company>lavaleak</Company>
+        <Copyright>Copyright 2017-2020 Leona Araujo araujo.contato@gmail.com</Copyright>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageProjectUrl>https://github.com/lavaleak/RTFExporter</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/lavaleak/RTFExporter</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <Description>A C# library to generate .RTF text files from any string object data, stylized and ready for any text processor. No fancy dependencies or restrictive licenses.</Description>
+        <PackageReleaseNotes>chore: Copyright update.</PackageReleaseNotes>
+        <PackageTags>rtf;rich;text;doc;docx;word;string</PackageTags>
+        <LangVersion>4</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="LICENSE.md" Pack="true" PackagePath="" />
+    </ItemGroup>
 </Project>
