@@ -6,14 +6,14 @@
         <RootNamespace>RTFExporter</RootNamespace>
         <PackageId>RTFExporter</PackageId>
         <Title>RTFExporter</Title>
-        <Version>1.1.3</Version>
+        <Version>1.1.4</Version>
         <Authors>Leona Araujo</Authors>
-        <Company>lavaleak</Company>
-        <Copyright>Copyright 2017-2020 Leona Araujo araujo.contato@gmail.com</Copyright>
+        <Company>Lava Leak</Company>
+        <Copyright>Copyright (c) 2017-2020 Leona Araujo</Copyright>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-        <PackageProjectUrl>https://github.com/lavaleak/RTFExporter</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/lavaleak/RTFExporter</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/leonaaraujo/RTFExporter</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/leonaaraujo/RTFExporter</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <Description>A C# library to generate .RTF text files from any string object data, stylized and ready for any text processor. No fancy dependencies or restrictive licenses.</Description>
         <PackageReleaseNotes>chore: Copyright update.</PackageReleaseNotes>
@@ -22,6 +22,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="LICENSE.md" Pack="true" PackagePath="" />
+        <None Include="..\LICENSE.md" Pack="true" PackagePath=""/>
+        <None Include="..\README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
 </Project>
