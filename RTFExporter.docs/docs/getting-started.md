@@ -128,6 +128,23 @@ public void ExportToExistingStream(FileStream stream)
 
 ---
 
+## Building and Running Unit Tests
+
+If you are contributing to RTFExporter or validating your local clone, the repository includes a comprehensive **xUnit** test suite in `RTFExporter.test` and automated tasks configured via [Taskfile](https://taskfile.dev/).
+
+```bash
+# Run the complete unit test suite
+task test
+
+# Run unit tests with code coverage and generate HTML report
+task test:coverage
+
+# Or run via .NET CLI directly
+dotnet test RTFExporter.sln
+```
+
+---
+
 ## Next Steps
 
 Now that you have created your first document, dive into the [Styling & Formatting Guide](styling-guide.md) to discover advanced layout configurations, custom RGB colors, and typography settings.

@@ -328,3 +328,8 @@ ASALocalRun/
 _site/
 RTFExporter.docs/api/
 RTFExporter.docs/_site/
+
+# Test coverage results
+TestResults/
+*.cobertura.xml
+*.coverage.xml

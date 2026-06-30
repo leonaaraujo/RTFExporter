@@ -25,11 +25,26 @@ tasks:
     cmds:
       - dotnet build RTFExporter.sln --configuration Release
 
+  test:
+    desc: Run all unit tests in the RTFExporter solution
+    deps: [build]
+    cmds:
+      - dotnet test RTFExporter.sln --no-build --verbosity normal
+
+  test:coverage:
+    desc: Run unit tests with code coverage and generate HTML report in TestResults/html
+    deps: [build]
+    cmds:
+      - rm -rf TestResults
+      - dotnet test RTFExporter.sln --no-build --collect:"XPlat Code Coverage" --results-directory ./TestResults
+      - dotnet reportgenerator "-reports:TestResults/**/coverage.cobertura.xml" "-targetdir:TestResults/html" "-reporttypes:Html;TextSummary"
+      - cat TestResults/html/Summary.txt
+
   clean:
-    desc: Clean build outputs and generated documentation files
+    desc: Clean build outputs, test coverage results, and generated documentation files
     cmds:
       - dotnet clean RTFExporter.sln
-      - rm -rf RTFExporter.docs/_site
+      - rm -rf RTFExporter.docs/_site TestResults
       - rm -f RTFExporter.docs/api/*.yml RTFExporter.docs/api/.manifest
 
   docs:gen:
