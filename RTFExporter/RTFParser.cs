@@ -5,19 +5,20 @@ using System.IO;
 namespace RTFExporter
 {
   /// <summary>
-  /// The RTF parser class, it transform the RTFdocument into a file or string
+  /// Provides static serialization methods to transform an in-memory <see cref="RTFDocument"/> into raw RTF text syntax or directly save to disk.
   /// </summary>
   public class RTFParser
   {
+    /// <summary>The currently active document being parsed.</summary>
     public static RTFDocument document;
     private static Dictionary<string, int> fontsIndex = new Dictionary<string, int>();
 
     /// <summary>
-    /// Create or rewrite a file with RTF content
-    /// <seealso cref="RTExporter.RTFDocument">
+    /// Serializes the specified <see cref="RTFDocument"/> and saves the generated RTF string directly to a file path.
     /// </summary>
-    /// <param name="path">The folder path with filename</param>
-    /// <param name="document">The RTF document to save</param>
+    /// <param name="path">The target destination file path.</param>
+    /// <param name="document">The <see cref="RTFDocument"/> instance to save.</param>
+    /// <seealso cref="RTFExporter.RTFDocument"/>
     public static void ToFile(string path, RTFDocument document)
     {
       document.SetFile(path);
@@ -26,10 +27,10 @@ namespace RTFExporter
     }
 
     /// <summary>
-    /// Write a content straight to a file
+    /// Writes raw string content directly to the specified file path.
     /// </summary>
-    /// <param name="path">The folder path with filename</param>
-    /// <param name="document">The file content</param>
+    /// <param name="path">The target destination file path.</param>
+    /// <param name="content">The raw text or RTF content string to write.</param>
     public static void ToFile(string path, string content)
     {
       using(FileStream fs = new FileStream(path, FileMode.Create))
@@ -42,11 +43,11 @@ namespace RTFExporter
     }
 
     /// <summary>
-    /// Return a rich text formatted string from a RTF document object
-    /// <seealso cref="RTExporter.RTFDocument">
+    /// Generates and returns the complete RTF-formatted syntax string for the specified <see cref="RTFDocument"/>.
     /// </summary>
-    /// <param name="document">The RTF document to be formatted</param>
-    /// <returns>A rich text formatted string</returns>
+    /// <param name="document">The <see cref="RTFDocument"/> object to format.</param>
+    /// <returns>A string containing valid RTF 1.5/ANSI syntax ready for text processors.</returns>
+    /// <seealso cref="RTFExporter.RTFDocument"/>
     public static string ToString(RTFDocument document)
     {
       RTFParser.document = document;

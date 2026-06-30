@@ -323,3 +323,8 @@ ASALocalRun/
 
 # misc
 .DS_Store
+
+# DocFX generated outputs
+_site/
+RTFExporter.docs/api/
+RTFExporter.docs/_site/

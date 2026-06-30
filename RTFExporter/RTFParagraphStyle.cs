@@ -1,20 +1,25 @@
 namespace RTFExporter
 {
   /// <summary>
-  /// A paragraph indent configuration
+  /// Represents horizontal indentation settings for a paragraph within an RTF document.
   /// </summary>
   public struct Indent
   {
+    /// <summary>First line indentation offset in document units (<c>\fi</c>).</summary>
     public float firstLine;
+
+    /// <summary>Left block margin indentation in document units (<c>\li</c>).</summary>
     public float left;
+
+    /// <summary>Right block margin indentation in document units (<c>\ri</c>).</summary>
     public float right;
 
     /// <summary>
-    /// The paragraph indent constructor
+    /// Initializes a new instance of the <see cref="Indent"/> struct with specified offsets.
     /// </summary>
-    /// <param name="firstLine">A space in the first line</param>
-    /// <param name="left">A space in the left of the block</param>
-    /// <param name="right">A space in the right of the block</param>
+    /// <param name="firstLine">The first-line indent offset in document measurement units.</param>
+    /// <param name="left">The left block margin indent offset in document measurement units.</param>
+    /// <param name="right">The right block margin indent offset in document measurement units.</param>
     public Indent(float firstLine, float left, float right)
     {
       this.firstLine = firstLine;
@@ -24,44 +29,54 @@ namespace RTFExporter
   }
 
   /// <summary>
-  /// The text alignment type
+  /// Specifies horizontal text alignment for paragraphs inside an RTF document.
   /// </summary>
   public enum Alignment
   {
+    /// <summary>Left-aligned paragraph (<c>\ql</c>).</summary>
     Left,
+    /// <summary>Right-aligned paragraph (<c>\qr</c>). </summary>
     Right,
+    /// <summary>Center-aligned paragraph (<c>\qc</c>).</summary>
     Center,
+    /// <summary>Fully justified paragraph (<c>\qj</c>).</summary>
     Justified
   }
 
   /// <summary>
-  /// A group of paragraph styling configuration
+  /// Represents paragraph-level styling configuration including alignment, indentation, and vertical spacing.
   /// </summary>
   public class RTFParagraphStyle
   {
-
+    /// <summary>The horizontal indentation configuration for the paragraph.</summary>
     public Indent indent;
+
+    /// <summary>The horizontal alignment mode.</summary>
     public Alignment alignment;
+
+    /// <summary>Vertical spacing before the paragraph in twips (<c>\sb</c>).</summary>
     public int spaceBefore;
+
+    /// <summary>Vertical spacing after the paragraph in twips (<c>\sa</c>). Defaults to 100.</summary>
     public int spaceAfter = 100;
 
     /// <summary>
-    /// RTF paragraph style constructor with just alignment
-    /// <seealso cref="RTFExporter.Alignment">
+    /// Initializes a new instance of the <see cref="RTFParagraphStyle"/> class with a specified horizontal alignment.
     /// </summary>
-    /// <param name="alignment">Alignment object</param>
+    /// <param name="alignment">The <see cref="Alignment"/> mode applied to the paragraph.</param>
+    /// <seealso cref="RTFExporter.Alignment"/>
     public RTFParagraphStyle(Alignment alignment)
     {
       this.alignment = alignment;
     }
 
     /// <summary>
-    /// RTF paragraph style constructor with just alignment and indent
-    /// <seealso cref="RTFExporter.Alignment">
-    /// <seealso cref="RTFExporter.Indent">
+    /// Initializes a new instance of the <see cref="RTFParagraphStyle"/> class with horizontal alignment and indentation settings.
     /// </summary>
-    /// <param name="alignment">Alignment object</param>
-    /// <param name="indent">Indent object</param>
+    /// <param name="alignment">The <see cref="Alignment"/> mode applied to the paragraph.</param>
+    /// <param name="indent">The <see cref="Indent"/> structure specifying offsets.</param>
+    /// <seealso cref="RTFExporter.Alignment"/>
+    /// <seealso cref="RTFExporter.Indent"/>
     public RTFParagraphStyle(Alignment alignment, Indent indent)
     {
       this.alignment = alignment;
@@ -69,14 +84,14 @@ namespace RTFExporter
     }
 
     /// <summary>
-    /// RTF paragraph style constructor complete
-    /// <seealso cref="RTFExporter.Alignment">
-    /// <seealso cref="RTFExporter.Indent">
+    /// Initializes a complete instance of the <see cref="RTFParagraphStyle"/> class with alignment, indentation, and vertical spacing.
     /// </summary>
-    /// <param name="alignment">Alignment object</param>
-    /// <param name="indent">Indent object</param>
-    /// <param name="spaceBefore">Space vertical before paragraph</param>
-    /// <param name="spaceAfter">Space vertical after paragraph</param>
+    /// <param name="alignment">The <see cref="Alignment"/> mode applied to the paragraph.</param>
+    /// <param name="indent">The <see cref="Indent"/> structure specifying offsets.</param>
+    /// <param name="spaceBefore">Vertical space before the paragraph (in twips).</param>
+    /// <param name="spaceAfter">Vertical space after the paragraph (in twips).</param>
+    /// <seealso cref="RTFExporter.Alignment"/>
+    /// <seealso cref="RTFExporter.Indent"/>
     public RTFParagraphStyle(Alignment alignment, Indent indent, int spaceBefore, int spaceAfter)
     {
       this.alignment = alignment;
@@ -86,10 +101,10 @@ namespace RTFExporter
     }
 
     /// <summary>
-    /// RTF paragraph style constructor with parent document
-    /// <seealso cref="RTFExporter.RTFDocument">
+    /// Initializes a new instance of the <see cref="RTFParagraphStyle"/> class tailored to the measurement units of a parent document.
     /// </summary>
-    /// <param name="document">The RTF document to append the paragraph</param>
+    /// <param name="document">The parent <see cref="RTFDocument"/> providing measurement units for default indentation.</param>
+    /// <seealso cref="RTFExporter.RTFDocument"/>
     public RTFParagraphStyle(RTFDocument document)
     {
       switch (document.units)
