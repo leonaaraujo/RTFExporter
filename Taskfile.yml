@@ -1,0 +1,45 @@
+version: '3'
+
+tasks:
+  default:
+    desc: List all available tasks
+    silent: true
+    cmds:
+      - task --list
+
+  restore:
+    desc: Restore .NET local tools and NuGet package dependencies
+    cmds:
+      - dotnet tool restore
+      - dotnet restore RTFExporter.sln
+
+  build:
+    desc: Build the RTFExporter solution
+    deps: [restore]
+    cmds:
+      - dotnet build RTFExporter.sln --configuration Debug
+
+  build:release:
+    desc: Build the RTFExporter solution in Release configuration
+    deps: [restore]
+    cmds:
+      - dotnet build RTFExporter.sln --configuration Release
+
+  clean:
+    desc: Clean build outputs and generated documentation files
+    cmds:
+      - dotnet clean RTFExporter.sln
+      - rm -rf RTFExporter.docs/_site
+      - rm -f RTFExporter.docs/api/*.yml RTFExporter.docs/api/.manifest
+
+  docs:gen:
+    desc: Generate DocFX static documentation site
+    deps: [restore]
+    cmds:
+      - dotnet docfx RTFExporter.docs/docfx.json
+
+  docs:serve:
+    desc: Generate and serve DocFX documentation locally with live reload (http://localhost:8080)
+    deps: [restore]
+    cmds:
+      - dotnet docfx RTFExporter.docs/docfx.json --serve
