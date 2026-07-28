@@ -29,16 +29,16 @@ public class Example {
         using (RTFDocument doc = new RTFDocument("example.rtf")) {
             var p = doc.AppendParagraph();
 
-            p.style.alignment = Alignment.Center;
-            p.style.indent = new Indent(1, 0, 0);
-            p.style.spaceAfter = 400;
+            p.Style.Alignment = Alignment.Center;
+            p.Style.Indent = new Indent(1, 0, 0);
+            p.Style.SpaceAfter = 400;
 
             var t = p.AppendText("One: Don't pick up the phone\n");
-            t.content += "You know he's only callin' 'cause he's drunk and alone";
+            t.Content += "You know he's only callin' 'cause he's drunk and alone";
 
-            t.style.bold = true;
-            t.style.color = new Color(255, 0, 0);
-            t.style.fontFamily = "Courier";
+            t.Style.Bold = true;
+            t.Style.Color = new Color(255, 0, 0);
+            t.Style.FontFamily = "Courier";
         }
 
     }
@@ -64,7 +64,7 @@ public class Example {
         t1.SetStyle(new Color(255, 0, 0), 18, "Helv");
 
         RTFText t2 = new RTFText(p, "You'll have to kick him out again");
-        t2.style = t1.style;
+        t2.Style = t1.Style;
 
         string output = RTFParser.ToString(doc);
 

@@ -46,18 +46,18 @@ using (RTFDocument doc = new RTFDocument("Report.rtf"))
         bold: true, 
         fontSize: 18, 
         fontFamily: "Calibri", 
-        color: Color.blue
+        color: Color.Blue
     ));
 
     // Append body content with indentation and spacing
     RTFParagraph bodyPar = doc.AppendParagraph(new Indent(firstLine: 0.5f, left: 0f, right: 0f));
-    bodyPar.style.spaceBefore = 200; // 200 twips vertical spacing
+    bodyPar.Style.SpaceBefore = 200; // 200 twips vertical spacing
     
     bodyPar.AppendText("Total revenue increased by 14.2% compared to last quarter. ");
     
     RTFText highlight = bodyPar.AppendText("Action required immediately.");
-    highlight.style.color = Color.red;
-    highlight.style.underline = Underline.Wave;
+    highlight.Style.Color = Color.Red;
+    highlight.Style.Underline = Underline.Wave;
 }
 ```
 

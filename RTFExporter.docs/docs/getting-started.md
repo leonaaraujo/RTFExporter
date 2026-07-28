@@ -43,30 +43,30 @@ namespace DocumentExample
             using (RTFDocument doc = new RTFDocument("ProjectReport.rtf"))
             {
                 // Set document author metadata
-                doc.author = "Jane Doe";
+                doc.Author = "Jane Doe";
 
                 // 2. Add a centered Title Paragraph
                 RTFParagraph title = doc.AppendParagraph(Alignment.Center);
-                title.style.spaceAfter = 300; // 300 twips spacing after title
+                title.Style.SpaceAfter = 300; // 300 twips spacing after title
 
                 title.AppendText("Q3 Technical Report", new RTFTextStyle(
                     italic: false,
                     bold: true,
                     fontSize: 20,
                     fontFamily: "Arial",
-                    color: Color.blue
+                    color: Color.Blue
                 ));
 
                 // 3. Add regular body paragraph with indentation
                 RTFParagraph body = doc.AppendParagraph();
-                body.style.indent = new Indent(firstLine: 0.5f, left: 0f, right: 0f);
+                body.Style.Indent = new Indent(firstLine: 0.5f, left: 0f, right: 0f);
 
                 body.AppendText("During Q3, our system performance increased significantly. ");
                 
                 // Add inline formatted text to the same paragraph
                 RTFText boldHighlight = body.AppendText("Latency decreased by 45 ms ");
-                boldHighlight.style.bold = true;
-                boldHighlight.style.color = Color.green;
+                boldHighlight.Style.Bold = true;
+                boldHighlight.Style.Color = Color.Green;
 
                 body.AppendText("across all edge nodes.");
             }
@@ -92,14 +92,14 @@ public string GenerateInvoiceRtf(string customerName, decimal totalAmount)
     RTFDocument doc = new RTFDocument();
     
     RTFParagraph header = doc.AppendParagraph(Alignment.Right);
-    header.AppendText("INVOICE STATEMENT\n", new RTFTextStyle(false, true, 16, "Calibri", Color.black));
+    header.AppendText("INVOICE STATEMENT\n", new RTFTextStyle(false, true, 16, "Calibri", Color.Black));
     
     RTFParagraph body = doc.AppendParagraph();
     body.AppendText($"Customer: {customerName}\n");
     
     RTFText total = body.AppendText($"Total Due: ${totalAmount:F2}");
-    total.style.bold = true;
-    total.style.color = new Color(180, 0, 0); // Custom RGB dark red
+    total.Style.Bold = true;
+    total.Style.Color = new Color(180, 0, 0); // Custom RGB dark red
 
     // Serialize to raw RTF syntax payload
     return RTFParser.ToString(doc);

@@ -52,7 +52,7 @@ Indent blockquoteIndent = new Indent(firstLine: 0f, left: 1.0f, right: 1.0f);
 
 RTFParagraph quote = doc.AppendParagraph(Alignment.Left, blockquoteIndent);
 quote.AppendText("\"Simplicity is prerequisite for reliability.\" - Edsger W. Dijkstra", new RTFTextStyle(
-    italic: true, bold: false, fontSize: 11, fontFamily: "Georgia", color: Color.black
+    italic: true, bold: false, fontSize: 11, fontFamily: "Georgia", color: Color.Black
 ));
 ```
 
@@ -61,8 +61,8 @@ Control vertical separation between paragraphs using twips ($1/20$ of a point):
 
 ```csharp
 RTFParagraph p = doc.AppendParagraph();
-p.style.spaceBefore = 150; // Add 150 twips (~7.5pt) above paragraph
-p.style.spaceAfter = 250;  // Add 250 twips (~12.5pt) below paragraph
+p.Style.SpaceBefore = 150; // Add 150 twips (~7.5pt) above paragraph
+p.Style.SpaceAfter = 250;  // Add 250 twips (~12.5pt) below paragraph
 ```
 
 ---
@@ -76,9 +76,9 @@ RTFExporter comes with predefined static colors on `Color`, or you can instantia
 
 ```csharp
 // Predefined colors
-Color black = Color.black;
-Color red = Color.red;
-Color blue = Color.blue;
+Color black = Color.Black;
+Color red = Color.Red;
+Color blue = Color.Blue;
 
 // Custom brand color (Hex #621EE5 -> R:98, G:30, B:229)
 Color brandPurple = new Color(98, 30, 229);
@@ -130,7 +130,7 @@ RTFParagraph p = doc.AppendParagraph();
 
 // Fluent color, size, and font configuration
 p.AppendText("Notice: ")
- .SetStyle(Color.red, fontSize: 13, fontFamily: "Arial");
+ .SetStyle(Color.Red, fontSize: 13, fontFamily: "Arial");
 
 // Fluent decoration configuration
 p.AppendText("Please review terms and conditions carefully.")
