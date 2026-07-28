@@ -44,7 +44,7 @@ tasks:
     desc: Clean build outputs, test coverage results, and generated documentation files
     cmds:
       - dotnet clean RTFExporter.sln
-      - rm -rf RTFExporter.docs/_site TestResults
+      - rm -rf docs/_site TestResults
       - rm -f RTFExporter.docs/api/*.yml RTFExporter.docs/api/.manifest
 
   docs:gen:

@@ -1,0 +1,294 @@
+{
+  "source_base_path": "D:/code/leonaaraujo/RTFExporter/RTFExporter.docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RTFExporter.Alignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RTFExporter.Alignment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RTFExporter.Alignment",
+      "Summary": "<p sourcefile=\"api/RTFExporter.Alignment.yml\" sourcestartlinenumber=\"1\">Specifies horizontal text alignment for paragraphs inside an RTF document.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RTFExporter.Color.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RTFExporter.Color.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RTFExporter.Color",
+      "Summary": "<p sourcefile=\"api/RTFExporter.Color.yml\" sourcestartlinenumber=\"1\">Represents an RGB color used within an RTF document's color table (<code>\\colortbl</code>).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RTFExporter.Indent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RTFExporter.Indent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RTFExporter.Indent",
+      "Summary": "<p sourcefile=\"api/RTFExporter.Indent.yml\" sourcestartlinenumber=\"1\">Represents horizontal indentation settings for a paragraph within an RTF document.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RTFExporter.Margin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RTFExporter.Margin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RTFExporter.Margin",
+      "Summary": "<p sourcefile=\"api/RTFExporter.Margin.yml\" sourcestartlinenumber=\"1\">Represents document margins (left, right, top, bottom) in current document measurement units.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RTFExporter.Orientation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RTFExporter.Orientation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RTFExporter.Orientation",
+      "Summary": "<p sourcefile=\"api/RTFExporter.Orientation.yml\" sourcestartlinenumber=\"1\">Specifies the page orientation of an RTF document.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RTFExporter.RTFDocument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RTFExporter.RTFDocument.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RTFExporter.RTFDocument",
+      "Summary": "<p sourcefile=\"api/RTFExporter.RTFDocument.yml\" sourcestartlinenumber=\"1\">Represents a Rich Text Format (RTF) document. Acts as the root container for paragraphs, color tables, font tables, and document metadata.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RTFExporter.RTFParagraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RTFExporter.RTFParagraph.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RTFExporter.RTFParagraph",
+      "Summary": "<p sourcefile=\"api/RTFExporter.RTFParagraph.yml\" sourcestartlinenumber=\"1\">Represents a structural paragraph block inside an RTF document (<code>\\par</code>).\nContains a collection of text segments and paragraph-level styling.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RTFExporter.RTFParagraphStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RTFExporter.RTFParagraphStyle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RTFExporter.RTFParagraphStyle",
+      "Summary": "<p sourcefile=\"api/RTFExporter.RTFParagraphStyle.yml\" sourcestartlinenumber=\"1\">Represents paragraph-level styling configuration including alignment, indentation, and vertical spacing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RTFExporter.RTFParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RTFExporter.RTFParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RTFExporter.RTFParser",
+      "Summary": "<p sourcefile=\"api/RTFExporter.RTFParser.yml\" sourcestartlinenumber=\"1\">Provides static serialization methods to transform an in-memory <xref href=\"RTFExporter.RTFDocument\" data-throw-if-not-resolved=\"false\"></xref> into raw RTF text syntax or directly save to disk.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RTFExporter.RTFText.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RTFExporter.RTFText.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RTFExporter.RTFText",
+      "Summary": "<p sourcefile=\"api/RTFExporter.RTFText.yml\" sourcestartlinenumber=\"1\">Represents a contiguous run of formatted text within an <xref href=\"RTFExporter.RTFParagraph\" data-throw-if-not-resolved=\"false\"></xref>.\nEvery <xref href=\"RTFExporter.RTFText\" data-throw-if-not-resolved=\"false\"></xref> instance holds its raw string content and character-level style.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RTFExporter.RTFTextStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RTFExporter.RTFTextStyle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RTFExporter.RTFTextStyle",
+      "Summary": "<p sourcefile=\"api/RTFExporter.RTFTextStyle.yml\" sourcestartlinenumber=\"1\">Represents character-level styling options for text runs inside an RTF document.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RTFExporter.Underline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RTFExporter.Underline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RTFExporter.Underline",
+      "Summary": "<p sourcefile=\"api/RTFExporter.Underline.yml\" sourcestartlinenumber=\"1\">Specifies the style of underline applied to an RTF text run.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RTFExporter.Units.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RTFExporter.Units.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RTFExporter.Units",
+      "Summary": "<p sourcefile=\"api/RTFExporter.Units.yml\" sourcestartlinenumber=\"1\">Specifies the measurement units used for document dimensions, margins, and paragraph spacing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RTFExporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RTFExporter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RTFExporter",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/styling-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/styling-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

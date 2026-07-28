@@ -1,0 +1,1246 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: RTFExporter
+  name: RTFExporter
+  href: api/RTFExporter.html
+  commentId: N:RTFExporter
+  fullName: RTFExporter
+  nameWithType: RTFExporter
+- uid: RTFExporter.Alignment
+  name: Alignment
+  href: api/RTFExporter.Alignment.html
+  commentId: T:RTFExporter.Alignment
+  fullName: RTFExporter.Alignment
+  nameWithType: Alignment
+- uid: RTFExporter.Alignment.Center
+  name: Center
+  href: api/RTFExporter.Alignment.html#RTFExporter_Alignment_Center
+  commentId: F:RTFExporter.Alignment.Center
+  fullName: RTFExporter.Alignment.Center
+  nameWithType: Alignment.Center
+- uid: RTFExporter.Alignment.Justified
+  name: Justified
+  href: api/RTFExporter.Alignment.html#RTFExporter_Alignment_Justified
+  commentId: F:RTFExporter.Alignment.Justified
+  fullName: RTFExporter.Alignment.Justified
+  nameWithType: Alignment.Justified
+- uid: RTFExporter.Alignment.Left
+  name: Left
+  href: api/RTFExporter.Alignment.html#RTFExporter_Alignment_Left
+  commentId: F:RTFExporter.Alignment.Left
+  fullName: RTFExporter.Alignment.Left
+  nameWithType: Alignment.Left
+- uid: RTFExporter.Alignment.Right
+  name: Right
+  href: api/RTFExporter.Alignment.html#RTFExporter_Alignment_Right
+  commentId: F:RTFExporter.Alignment.Right
+  fullName: RTFExporter.Alignment.Right
+  nameWithType: Alignment.Right
+- uid: RTFExporter.Color
+  name: Color
+  href: api/RTFExporter.Color.html
+  commentId: T:RTFExporter.Color
+  fullName: RTFExporter.Color
+  nameWithType: Color
+- uid: RTFExporter.Color.#ctor(System.Byte,System.Byte,System.Byte)
+  name: Color(byte, byte, byte)
+  href: api/RTFExporter.Color.html#RTFExporter_Color__ctor_System_Byte_System_Byte_System_Byte_
+  commentId: M:RTFExporter.Color.#ctor(System.Byte,System.Byte,System.Byte)
+  name.vb: New(Byte, Byte, Byte)
+  fullName: RTFExporter.Color.Color(byte, byte, byte)
+  fullName.vb: RTFExporter.Color.New(Byte, Byte, Byte)
+  nameWithType: Color.Color(byte, byte, byte)
+  nameWithType.vb: Color.New(Byte, Byte, Byte)
+- uid: RTFExporter.Color.#ctor*
+  name: Color
+  href: api/RTFExporter.Color.html#RTFExporter_Color__ctor_
+  commentId: Overload:RTFExporter.Color.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RTFExporter.Color.Color
+  fullName.vb: RTFExporter.Color.New
+  nameWithType: Color.Color
+  nameWithType.vb: Color.New
+- uid: RTFExporter.Color.B
+  name: B
+  href: api/RTFExporter.Color.html#RTFExporter_Color_B
+  commentId: P:RTFExporter.Color.B
+  fullName: RTFExporter.Color.B
+  nameWithType: Color.B
+- uid: RTFExporter.Color.B*
+  name: B
+  href: api/RTFExporter.Color.html#RTFExporter_Color_B_
+  commentId: Overload:RTFExporter.Color.B
+  isSpec: "True"
+  fullName: RTFExporter.Color.B
+  nameWithType: Color.B
+- uid: RTFExporter.Color.Black
+  name: Black
+  href: api/RTFExporter.Color.html#RTFExporter_Color_Black
+  commentId: F:RTFExporter.Color.Black
+  fullName: RTFExporter.Color.Black
+  nameWithType: Color.Black
+- uid: RTFExporter.Color.Blue
+  name: Blue
+  href: api/RTFExporter.Color.html#RTFExporter_Color_Blue
+  commentId: F:RTFExporter.Color.Blue
+  fullName: RTFExporter.Color.Blue
+  nameWithType: Color.Blue
+- uid: RTFExporter.Color.Cyan
+  name: Cyan
+  href: api/RTFExporter.Color.html#RTFExporter_Color_Cyan
+  commentId: F:RTFExporter.Color.Cyan
+  fullName: RTFExporter.Color.Cyan
+  nameWithType: Color.Cyan
+- uid: RTFExporter.Color.G
+  name: G
+  href: api/RTFExporter.Color.html#RTFExporter_Color_G
+  commentId: P:RTFExporter.Color.G
+  fullName: RTFExporter.Color.G
+  nameWithType: Color.G
+- uid: RTFExporter.Color.G*
+  name: G
+  href: api/RTFExporter.Color.html#RTFExporter_Color_G_
+  commentId: Overload:RTFExporter.Color.G
+  isSpec: "True"
+  fullName: RTFExporter.Color.G
+  nameWithType: Color.G
+- uid: RTFExporter.Color.Green
+  name: Green
+  href: api/RTFExporter.Color.html#RTFExporter_Color_Green
+  commentId: F:RTFExporter.Color.Green
+  fullName: RTFExporter.Color.Green
+  nameWithType: Color.Green
+- uid: RTFExporter.Color.Index
+  name: Index
+  href: api/RTFExporter.Color.html#RTFExporter_Color_Index
+  commentId: P:RTFExporter.Color.Index
+  fullName: RTFExporter.Color.Index
+  nameWithType: Color.Index
+- uid: RTFExporter.Color.Index*
+  name: Index
+  href: api/RTFExporter.Color.html#RTFExporter_Color_Index_
+  commentId: Overload:RTFExporter.Color.Index
+  isSpec: "True"
+  fullName: RTFExporter.Color.Index
+  nameWithType: Color.Index
+- uid: RTFExporter.Color.Purple
+  name: Purple
+  href: api/RTFExporter.Color.html#RTFExporter_Color_Purple
+  commentId: F:RTFExporter.Color.Purple
+  fullName: RTFExporter.Color.Purple
+  nameWithType: Color.Purple
+- uid: RTFExporter.Color.R
+  name: R
+  href: api/RTFExporter.Color.html#RTFExporter_Color_R
+  commentId: P:RTFExporter.Color.R
+  fullName: RTFExporter.Color.R
+  nameWithType: Color.R
+- uid: RTFExporter.Color.R*
+  name: R
+  href: api/RTFExporter.Color.html#RTFExporter_Color_R_
+  commentId: Overload:RTFExporter.Color.R
+  isSpec: "True"
+  fullName: RTFExporter.Color.R
+  nameWithType: Color.R
+- uid: RTFExporter.Color.Red
+  name: Red
+  href: api/RTFExporter.Color.html#RTFExporter_Color_Red
+  commentId: F:RTFExporter.Color.Red
+  fullName: RTFExporter.Color.Red
+  nameWithType: Color.Red
+- uid: RTFExporter.Color.White
+  name: White
+  href: api/RTFExporter.Color.html#RTFExporter_Color_White
+  commentId: F:RTFExporter.Color.White
+  fullName: RTFExporter.Color.White
+  nameWithType: Color.White
+- uid: RTFExporter.Color.Yellow
+  name: Yellow
+  href: api/RTFExporter.Color.html#RTFExporter_Color_Yellow
+  commentId: F:RTFExporter.Color.Yellow
+  fullName: RTFExporter.Color.Yellow
+  nameWithType: Color.Yellow
+- uid: RTFExporter.Indent
+  name: Indent
+  href: api/RTFExporter.Indent.html
+  commentId: T:RTFExporter.Indent
+  fullName: RTFExporter.Indent
+  nameWithType: Indent
+- uid: RTFExporter.Indent.#ctor(System.Single,System.Single,System.Single)
+  name: Indent(float, float, float)
+  href: api/RTFExporter.Indent.html#RTFExporter_Indent__ctor_System_Single_System_Single_System_Single_
+  commentId: M:RTFExporter.Indent.#ctor(System.Single,System.Single,System.Single)
+  name.vb: New(Single, Single, Single)
+  fullName: RTFExporter.Indent.Indent(float, float, float)
+  fullName.vb: RTFExporter.Indent.New(Single, Single, Single)
+  nameWithType: Indent.Indent(float, float, float)
+  nameWithType.vb: Indent.New(Single, Single, Single)
+- uid: RTFExporter.Indent.#ctor*
+  name: Indent
+  href: api/RTFExporter.Indent.html#RTFExporter_Indent__ctor_
+  commentId: Overload:RTFExporter.Indent.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RTFExporter.Indent.Indent
+  fullName.vb: RTFExporter.Indent.New
+  nameWithType: Indent.Indent
+  nameWithType.vb: Indent.New
+- uid: RTFExporter.Indent.FirstLine
+  name: FirstLine
+  href: api/RTFExporter.Indent.html#RTFExporter_Indent_FirstLine
+  commentId: F:RTFExporter.Indent.FirstLine
+  fullName: RTFExporter.Indent.FirstLine
+  nameWithType: Indent.FirstLine
+- uid: RTFExporter.Indent.Left
+  name: Left
+  href: api/RTFExporter.Indent.html#RTFExporter_Indent_Left
+  commentId: F:RTFExporter.Indent.Left
+  fullName: RTFExporter.Indent.Left
+  nameWithType: Indent.Left
+- uid: RTFExporter.Indent.Right
+  name: Right
+  href: api/RTFExporter.Indent.html#RTFExporter_Indent_Right
+  commentId: F:RTFExporter.Indent.Right
+  fullName: RTFExporter.Indent.Right
+  nameWithType: Indent.Right
+- uid: RTFExporter.Margin
+  name: Margin
+  href: api/RTFExporter.Margin.html
+  commentId: T:RTFExporter.Margin
+  fullName: RTFExporter.Margin
+  nameWithType: Margin
+- uid: RTFExporter.Margin.#ctor(System.Single,System.Single,System.Single,System.Single)
+  name: Margin(float, float, float, float)
+  href: api/RTFExporter.Margin.html#RTFExporter_Margin__ctor_System_Single_System_Single_System_Single_System_Single_
+  commentId: M:RTFExporter.Margin.#ctor(System.Single,System.Single,System.Single,System.Single)
+  name.vb: New(Single, Single, Single, Single)
+  fullName: RTFExporter.Margin.Margin(float, float, float, float)
+  fullName.vb: RTFExporter.Margin.New(Single, Single, Single, Single)
+  nameWithType: Margin.Margin(float, float, float, float)
+  nameWithType.vb: Margin.New(Single, Single, Single, Single)
+- uid: RTFExporter.Margin.#ctor*
+  name: Margin
+  href: api/RTFExporter.Margin.html#RTFExporter_Margin__ctor_
+  commentId: Overload:RTFExporter.Margin.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RTFExporter.Margin.Margin
+  fullName.vb: RTFExporter.Margin.New
+  nameWithType: Margin.Margin
+  nameWithType.vb: Margin.New
+- uid: RTFExporter.Margin.Bottom
+  name: Bottom
+  href: api/RTFExporter.Margin.html#RTFExporter_Margin_Bottom
+  commentId: P:RTFExporter.Margin.Bottom
+  fullName: RTFExporter.Margin.Bottom
+  nameWithType: Margin.Bottom
+- uid: RTFExporter.Margin.Bottom*
+  name: Bottom
+  href: api/RTFExporter.Margin.html#RTFExporter_Margin_Bottom_
+  commentId: Overload:RTFExporter.Margin.Bottom
+  isSpec: "True"
+  fullName: RTFExporter.Margin.Bottom
+  nameWithType: Margin.Bottom
+- uid: RTFExporter.Margin.Left
+  name: Left
+  href: api/RTFExporter.Margin.html#RTFExporter_Margin_Left
+  commentId: P:RTFExporter.Margin.Left
+  fullName: RTFExporter.Margin.Left
+  nameWithType: Margin.Left
+- uid: RTFExporter.Margin.Left*
+  name: Left
+  href: api/RTFExporter.Margin.html#RTFExporter_Margin_Left_
+  commentId: Overload:RTFExporter.Margin.Left
+  isSpec: "True"
+  fullName: RTFExporter.Margin.Left
+  nameWithType: Margin.Left
+- uid: RTFExporter.Margin.Right
+  name: Right
+  href: api/RTFExporter.Margin.html#RTFExporter_Margin_Right
+  commentId: P:RTFExporter.Margin.Right
+  fullName: RTFExporter.Margin.Right
+  nameWithType: Margin.Right
+- uid: RTFExporter.Margin.Right*
+  name: Right
+  href: api/RTFExporter.Margin.html#RTFExporter_Margin_Right_
+  commentId: Overload:RTFExporter.Margin.Right
+  isSpec: "True"
+  fullName: RTFExporter.Margin.Right
+  nameWithType: Margin.Right
+- uid: RTFExporter.Margin.Top
+  name: Top
+  href: api/RTFExporter.Margin.html#RTFExporter_Margin_Top
+  commentId: P:RTFExporter.Margin.Top
+  fullName: RTFExporter.Margin.Top
+  nameWithType: Margin.Top
+- uid: RTFExporter.Margin.Top*
+  name: Top
+  href: api/RTFExporter.Margin.html#RTFExporter_Margin_Top_
+  commentId: Overload:RTFExporter.Margin.Top
+  isSpec: "True"
+  fullName: RTFExporter.Margin.Top
+  nameWithType: Margin.Top
+- uid: RTFExporter.Orientation
+  name: Orientation
+  href: api/RTFExporter.Orientation.html
+  commentId: T:RTFExporter.Orientation
+  fullName: RTFExporter.Orientation
+  nameWithType: Orientation
+- uid: RTFExporter.Orientation.Landscape
+  name: Landscape
+  href: api/RTFExporter.Orientation.html#RTFExporter_Orientation_Landscape
+  commentId: F:RTFExporter.Orientation.Landscape
+  fullName: RTFExporter.Orientation.Landscape
+  nameWithType: Orientation.Landscape
+- uid: RTFExporter.Orientation.Portrait
+  name: Portrait
+  href: api/RTFExporter.Orientation.html#RTFExporter_Orientation_Portrait
+  commentId: F:RTFExporter.Orientation.Portrait
+  fullName: RTFExporter.Orientation.Portrait
+  nameWithType: Orientation.Portrait
+- uid: RTFExporter.RTFDocument
+  name: RTFDocument
+  href: api/RTFExporter.RTFDocument.html
+  commentId: T:RTFExporter.RTFDocument
+  fullName: RTFExporter.RTFDocument
+  nameWithType: RTFDocument
+- uid: RTFExporter.RTFDocument.#ctor
+  name: RTFDocument()
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument__ctor
+  commentId: M:RTFExporter.RTFDocument.#ctor
+  name.vb: New()
+  fullName: RTFExporter.RTFDocument.RTFDocument()
+  fullName.vb: RTFExporter.RTFDocument.New()
+  nameWithType: RTFDocument.RTFDocument()
+  nameWithType.vb: RTFDocument.New()
+- uid: RTFExporter.RTFDocument.#ctor(System.IO.FileStream)
+  name: RTFDocument(FileStream)
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument__ctor_System_IO_FileStream_
+  commentId: M:RTFExporter.RTFDocument.#ctor(System.IO.FileStream)
+  name.vb: New(FileStream)
+  fullName: RTFExporter.RTFDocument.RTFDocument(System.IO.FileStream)
+  fullName.vb: RTFExporter.RTFDocument.New(System.IO.FileStream)
+  nameWithType: RTFDocument.RTFDocument(FileStream)
+  nameWithType.vb: RTFDocument.New(FileStream)
+- uid: RTFExporter.RTFDocument.#ctor(System.IO.FileStream,System.Single,System.Single,RTFExporter.Orientation,RTFExporter.Units)
+  name: RTFDocument(FileStream, float, float, Orientation, Units)
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument__ctor_System_IO_FileStream_System_Single_System_Single_RTFExporter_Orientation_RTFExporter_Units_
+  commentId: M:RTFExporter.RTFDocument.#ctor(System.IO.FileStream,System.Single,System.Single,RTFExporter.Orientation,RTFExporter.Units)
+  name.vb: New(FileStream, Single, Single, Orientation, Units)
+  fullName: RTFExporter.RTFDocument.RTFDocument(System.IO.FileStream, float, float, RTFExporter.Orientation, RTFExporter.Units)
+  fullName.vb: RTFExporter.RTFDocument.New(System.IO.FileStream, Single, Single, RTFExporter.Orientation, RTFExporter.Units)
+  nameWithType: RTFDocument.RTFDocument(FileStream, float, float, Orientation, Units)
+  nameWithType.vb: RTFDocument.New(FileStream, Single, Single, Orientation, Units)
+- uid: RTFExporter.RTFDocument.#ctor(System.Single,System.Single,RTFExporter.Orientation,RTFExporter.Units)
+  name: RTFDocument(float, float, Orientation, Units)
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument__ctor_System_Single_System_Single_RTFExporter_Orientation_RTFExporter_Units_
+  commentId: M:RTFExporter.RTFDocument.#ctor(System.Single,System.Single,RTFExporter.Orientation,RTFExporter.Units)
+  name.vb: New(Single, Single, Orientation, Units)
+  fullName: RTFExporter.RTFDocument.RTFDocument(float, float, RTFExporter.Orientation, RTFExporter.Units)
+  fullName.vb: RTFExporter.RTFDocument.New(Single, Single, RTFExporter.Orientation, RTFExporter.Units)
+  nameWithType: RTFDocument.RTFDocument(float, float, Orientation, Units)
+  nameWithType.vb: RTFDocument.New(Single, Single, Orientation, Units)
+- uid: RTFExporter.RTFDocument.#ctor(System.String)
+  name: RTFDocument(string)
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument__ctor_System_String_
+  commentId: M:RTFExporter.RTFDocument.#ctor(System.String)
+  name.vb: New(String)
+  fullName: RTFExporter.RTFDocument.RTFDocument(string)
+  fullName.vb: RTFExporter.RTFDocument.New(String)
+  nameWithType: RTFDocument.RTFDocument(string)
+  nameWithType.vb: RTFDocument.New(String)
+- uid: RTFExporter.RTFDocument.#ctor(System.String,System.Single,System.Single,RTFExporter.Orientation,RTFExporter.Units)
+  name: RTFDocument(string, float, float, Orientation, Units)
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument__ctor_System_String_System_Single_System_Single_RTFExporter_Orientation_RTFExporter_Units_
+  commentId: M:RTFExporter.RTFDocument.#ctor(System.String,System.Single,System.Single,RTFExporter.Orientation,RTFExporter.Units)
+  name.vb: New(String, Single, Single, Orientation, Units)
+  fullName: RTFExporter.RTFDocument.RTFDocument(string, float, float, RTFExporter.Orientation, RTFExporter.Units)
+  fullName.vb: RTFExporter.RTFDocument.New(String, Single, Single, RTFExporter.Orientation, RTFExporter.Units)
+  nameWithType: RTFDocument.RTFDocument(string, float, float, Orientation, Units)
+  nameWithType.vb: RTFDocument.New(String, Single, Single, Orientation, Units)
+- uid: RTFExporter.RTFDocument.#ctor*
+  name: RTFDocument
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument__ctor_
+  commentId: Overload:RTFExporter.RTFDocument.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RTFExporter.RTFDocument.RTFDocument
+  fullName.vb: RTFExporter.RTFDocument.New
+  nameWithType: RTFDocument.RTFDocument
+  nameWithType.vb: RTFDocument.New
+- uid: RTFExporter.RTFDocument.AppendParagraph
+  name: AppendParagraph()
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_AppendParagraph
+  commentId: M:RTFExporter.RTFDocument.AppendParagraph
+  fullName: RTFExporter.RTFDocument.AppendParagraph()
+  nameWithType: RTFDocument.AppendParagraph()
+- uid: RTFExporter.RTFDocument.AppendParagraph(RTFExporter.Alignment)
+  name: AppendParagraph(Alignment)
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_AppendParagraph_RTFExporter_Alignment_
+  commentId: M:RTFExporter.RTFDocument.AppendParagraph(RTFExporter.Alignment)
+  fullName: RTFExporter.RTFDocument.AppendParagraph(RTFExporter.Alignment)
+  nameWithType: RTFDocument.AppendParagraph(Alignment)
+- uid: RTFExporter.RTFDocument.AppendParagraph(RTFExporter.Alignment,RTFExporter.Indent)
+  name: AppendParagraph(Alignment, Indent)
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_AppendParagraph_RTFExporter_Alignment_RTFExporter_Indent_
+  commentId: M:RTFExporter.RTFDocument.AppendParagraph(RTFExporter.Alignment,RTFExporter.Indent)
+  fullName: RTFExporter.RTFDocument.AppendParagraph(RTFExporter.Alignment, RTFExporter.Indent)
+  nameWithType: RTFDocument.AppendParagraph(Alignment, Indent)
+- uid: RTFExporter.RTFDocument.AppendParagraph(RTFExporter.Alignment,RTFExporter.Indent,System.Int32,System.Int32)
+  name: AppendParagraph(Alignment, Indent, int, int)
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_AppendParagraph_RTFExporter_Alignment_RTFExporter_Indent_System_Int32_System_Int32_
+  commentId: M:RTFExporter.RTFDocument.AppendParagraph(RTFExporter.Alignment,RTFExporter.Indent,System.Int32,System.Int32)
+  name.vb: AppendParagraph(Alignment, Indent, Integer, Integer)
+  fullName: RTFExporter.RTFDocument.AppendParagraph(RTFExporter.Alignment, RTFExporter.Indent, int, int)
+  fullName.vb: RTFExporter.RTFDocument.AppendParagraph(RTFExporter.Alignment, RTFExporter.Indent, Integer, Integer)
+  nameWithType: RTFDocument.AppendParagraph(Alignment, Indent, int, int)
+  nameWithType.vb: RTFDocument.AppendParagraph(Alignment, Indent, Integer, Integer)
+- uid: RTFExporter.RTFDocument.AppendParagraph(RTFExporter.Indent)
+  name: AppendParagraph(Indent)
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_AppendParagraph_RTFExporter_Indent_
+  commentId: M:RTFExporter.RTFDocument.AppendParagraph(RTFExporter.Indent)
+  fullName: RTFExporter.RTFDocument.AppendParagraph(RTFExporter.Indent)
+  nameWithType: RTFDocument.AppendParagraph(Indent)
+- uid: RTFExporter.RTFDocument.AppendParagraph(RTFExporter.RTFParagraphStyle)
+  name: AppendParagraph(RTFParagraphStyle)
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_AppendParagraph_RTFExporter_RTFParagraphStyle_
+  commentId: M:RTFExporter.RTFDocument.AppendParagraph(RTFExporter.RTFParagraphStyle)
+  fullName: RTFExporter.RTFDocument.AppendParagraph(RTFExporter.RTFParagraphStyle)
+  nameWithType: RTFDocument.AppendParagraph(RTFParagraphStyle)
+- uid: RTFExporter.RTFDocument.AppendParagraph*
+  name: AppendParagraph
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_AppendParagraph_
+  commentId: Overload:RTFExporter.RTFDocument.AppendParagraph
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.AppendParagraph
+  nameWithType: RTFDocument.AppendParagraph
+- uid: RTFExporter.RTFDocument.Author
+  name: Author
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Author
+  commentId: P:RTFExporter.RTFDocument.Author
+  fullName: RTFExporter.RTFDocument.Author
+  nameWithType: RTFDocument.Author
+- uid: RTFExporter.RTFDocument.Author*
+  name: Author
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Author_
+  commentId: Overload:RTFExporter.RTFDocument.Author
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Author
+  nameWithType: RTFDocument.Author
+- uid: RTFExporter.RTFDocument.Close
+  name: Close()
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Close
+  commentId: M:RTFExporter.RTFDocument.Close
+  fullName: RTFExporter.RTFDocument.Close()
+  nameWithType: RTFDocument.Close()
+- uid: RTFExporter.RTFDocument.Close*
+  name: Close
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Close_
+  commentId: Overload:RTFExporter.RTFDocument.Close
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Close
+  nameWithType: RTFDocument.Close
+- uid: RTFExporter.RTFDocument.Colors
+  name: Colors
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Colors
+  commentId: P:RTFExporter.RTFDocument.Colors
+  fullName: RTFExporter.RTFDocument.Colors
+  nameWithType: RTFDocument.Colors
+- uid: RTFExporter.RTFDocument.Colors*
+  name: Colors
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Colors_
+  commentId: Overload:RTFExporter.RTFDocument.Colors
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Colors
+  nameWithType: RTFDocument.Colors
+- uid: RTFExporter.RTFDocument.Dispose
+  name: Dispose()
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Dispose
+  commentId: M:RTFExporter.RTFDocument.Dispose
+  fullName: RTFExporter.RTFDocument.Dispose()
+  nameWithType: RTFDocument.Dispose()
+- uid: RTFExporter.RTFDocument.Dispose*
+  name: Dispose
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Dispose_
+  commentId: Overload:RTFExporter.RTFDocument.Dispose
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Dispose
+  nameWithType: RTFDocument.Dispose
+- uid: RTFExporter.RTFDocument.Fonts
+  name: Fonts
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Fonts
+  commentId: P:RTFExporter.RTFDocument.Fonts
+  fullName: RTFExporter.RTFDocument.Fonts
+  nameWithType: RTFDocument.Fonts
+- uid: RTFExporter.RTFDocument.Fonts*
+  name: Fonts
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Fonts_
+  commentId: Overload:RTFExporter.RTFDocument.Fonts
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Fonts
+  nameWithType: RTFDocument.Fonts
+- uid: RTFExporter.RTFDocument.Height
+  name: Height
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Height
+  commentId: P:RTFExporter.RTFDocument.Height
+  fullName: RTFExporter.RTFDocument.Height
+  nameWithType: RTFDocument.Height
+- uid: RTFExporter.RTFDocument.Height*
+  name: Height
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Height_
+  commentId: Overload:RTFExporter.RTFDocument.Height
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Height
+  nameWithType: RTFDocument.Height
+- uid: RTFExporter.RTFDocument.Init(System.Single,System.Single,RTFExporter.Orientation,RTFExporter.Units)
+  name: Init(float, float, Orientation, Units)
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Init_System_Single_System_Single_RTFExporter_Orientation_RTFExporter_Units_
+  commentId: M:RTFExporter.RTFDocument.Init(System.Single,System.Single,RTFExporter.Orientation,RTFExporter.Units)
+  name.vb: Init(Single, Single, Orientation, Units)
+  fullName: RTFExporter.RTFDocument.Init(float, float, RTFExporter.Orientation, RTFExporter.Units)
+  fullName.vb: RTFExporter.RTFDocument.Init(Single, Single, RTFExporter.Orientation, RTFExporter.Units)
+  nameWithType: RTFDocument.Init(float, float, Orientation, Units)
+  nameWithType.vb: RTFDocument.Init(Single, Single, Orientation, Units)
+- uid: RTFExporter.RTFDocument.Init*
+  name: Init
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Init_
+  commentId: Overload:RTFExporter.RTFDocument.Init
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Init
+  nameWithType: RTFDocument.Init
+- uid: RTFExporter.RTFDocument.Keywords
+  name: Keywords
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Keywords
+  commentId: P:RTFExporter.RTFDocument.Keywords
+  fullName: RTFExporter.RTFDocument.Keywords
+  nameWithType: RTFDocument.Keywords
+- uid: RTFExporter.RTFDocument.Keywords*
+  name: Keywords
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Keywords_
+  commentId: Overload:RTFExporter.RTFDocument.Keywords
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Keywords
+  nameWithType: RTFDocument.Keywords
+- uid: RTFExporter.RTFDocument.Margin
+  name: Margin
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Margin
+  commentId: P:RTFExporter.RTFDocument.Margin
+  fullName: RTFExporter.RTFDocument.Margin
+  nameWithType: RTFDocument.Margin
+- uid: RTFExporter.RTFDocument.Margin*
+  name: Margin
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Margin_
+  commentId: Overload:RTFExporter.RTFDocument.Margin
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Margin
+  nameWithType: RTFDocument.Margin
+- uid: RTFExporter.RTFDocument.Orientation
+  name: Orientation
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Orientation
+  commentId: P:RTFExporter.RTFDocument.Orientation
+  fullName: RTFExporter.RTFDocument.Orientation
+  nameWithType: RTFDocument.Orientation
+- uid: RTFExporter.RTFDocument.Orientation*
+  name: Orientation
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Orientation_
+  commentId: Overload:RTFExporter.RTFDocument.Orientation
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Orientation
+  nameWithType: RTFDocument.Orientation
+- uid: RTFExporter.RTFDocument.Paragraphs
+  name: Paragraphs
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Paragraphs
+  commentId: P:RTFExporter.RTFDocument.Paragraphs
+  fullName: RTFExporter.RTFDocument.Paragraphs
+  nameWithType: RTFDocument.Paragraphs
+- uid: RTFExporter.RTFDocument.Paragraphs*
+  name: Paragraphs
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Paragraphs_
+  commentId: Overload:RTFExporter.RTFDocument.Paragraphs
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Paragraphs
+  nameWithType: RTFDocument.Paragraphs
+- uid: RTFExporter.RTFDocument.Save
+  name: Save()
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Save
+  commentId: M:RTFExporter.RTFDocument.Save
+  fullName: RTFExporter.RTFDocument.Save()
+  nameWithType: RTFDocument.Save()
+- uid: RTFExporter.RTFDocument.Save*
+  name: Save
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Save_
+  commentId: Overload:RTFExporter.RTFDocument.Save
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Save
+  nameWithType: RTFDocument.Save
+- uid: RTFExporter.RTFDocument.SetFile(System.String)
+  name: SetFile(string)
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_SetFile_System_String_
+  commentId: M:RTFExporter.RTFDocument.SetFile(System.String)
+  name.vb: SetFile(String)
+  fullName: RTFExporter.RTFDocument.SetFile(string)
+  fullName.vb: RTFExporter.RTFDocument.SetFile(String)
+  nameWithType: RTFDocument.SetFile(string)
+  nameWithType.vb: RTFDocument.SetFile(String)
+- uid: RTFExporter.RTFDocument.SetFile*
+  name: SetFile
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_SetFile_
+  commentId: Overload:RTFExporter.RTFDocument.SetFile
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.SetFile
+  nameWithType: RTFDocument.SetFile
+- uid: RTFExporter.RTFDocument.SetMargin(System.Single,System.Single,System.Single,System.Single)
+  name: SetMargin(float, float, float, float)
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_SetMargin_System_Single_System_Single_System_Single_System_Single_
+  commentId: M:RTFExporter.RTFDocument.SetMargin(System.Single,System.Single,System.Single,System.Single)
+  name.vb: SetMargin(Single, Single, Single, Single)
+  fullName: RTFExporter.RTFDocument.SetMargin(float, float, float, float)
+  fullName.vb: RTFExporter.RTFDocument.SetMargin(Single, Single, Single, Single)
+  nameWithType: RTFDocument.SetMargin(float, float, float, float)
+  nameWithType.vb: RTFDocument.SetMargin(Single, Single, Single, Single)
+- uid: RTFExporter.RTFDocument.SetMargin*
+  name: SetMargin
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_SetMargin_
+  commentId: Overload:RTFExporter.RTFDocument.SetMargin
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.SetMargin
+  nameWithType: RTFDocument.SetMargin
+- uid: RTFExporter.RTFDocument.SetStream(System.IO.FileStream)
+  name: SetStream(FileStream)
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_SetStream_System_IO_FileStream_
+  commentId: M:RTFExporter.RTFDocument.SetStream(System.IO.FileStream)
+  fullName: RTFExporter.RTFDocument.SetStream(System.IO.FileStream)
+  nameWithType: RTFDocument.SetStream(FileStream)
+- uid: RTFExporter.RTFDocument.SetStream*
+  name: SetStream
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_SetStream_
+  commentId: Overload:RTFExporter.RTFDocument.SetStream
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.SetStream
+  nameWithType: RTFDocument.SetStream
+- uid: RTFExporter.RTFDocument.Units
+  name: Units
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Units
+  commentId: P:RTFExporter.RTFDocument.Units
+  fullName: RTFExporter.RTFDocument.Units
+  nameWithType: RTFDocument.Units
+- uid: RTFExporter.RTFDocument.Units*
+  name: Units
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Units_
+  commentId: Overload:RTFExporter.RTFDocument.Units
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Units
+  nameWithType: RTFDocument.Units
+- uid: RTFExporter.RTFDocument.Version
+  name: Version
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Version
+  commentId: P:RTFExporter.RTFDocument.Version
+  fullName: RTFExporter.RTFDocument.Version
+  nameWithType: RTFDocument.Version
+- uid: RTFExporter.RTFDocument.Version*
+  name: Version
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Version_
+  commentId: Overload:RTFExporter.RTFDocument.Version
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Version
+  nameWithType: RTFDocument.Version
+- uid: RTFExporter.RTFDocument.Width
+  name: Width
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Width
+  commentId: P:RTFExporter.RTFDocument.Width
+  fullName: RTFExporter.RTFDocument.Width
+  nameWithType: RTFDocument.Width
+- uid: RTFExporter.RTFDocument.Width*
+  name: Width
+  href: api/RTFExporter.RTFDocument.html#RTFExporter_RTFDocument_Width_
+  commentId: Overload:RTFExporter.RTFDocument.Width
+  isSpec: "True"
+  fullName: RTFExporter.RTFDocument.Width
+  nameWithType: RTFDocument.Width
+- uid: RTFExporter.RTFParagraph
+  name: RTFParagraph
+  href: api/RTFExporter.RTFParagraph.html
+  commentId: T:RTFExporter.RTFParagraph
+  fullName: RTFExporter.RTFParagraph
+  nameWithType: RTFParagraph
+- uid: RTFExporter.RTFParagraph.#ctor(RTFExporter.RTFDocument)
+  name: RTFParagraph(RTFDocument)
+  href: api/RTFExporter.RTFParagraph.html#RTFExporter_RTFParagraph__ctor_RTFExporter_RTFDocument_
+  commentId: M:RTFExporter.RTFParagraph.#ctor(RTFExporter.RTFDocument)
+  name.vb: New(RTFDocument)
+  fullName: RTFExporter.RTFParagraph.RTFParagraph(RTFExporter.RTFDocument)
+  fullName.vb: RTFExporter.RTFParagraph.New(RTFExporter.RTFDocument)
+  nameWithType: RTFParagraph.RTFParagraph(RTFDocument)
+  nameWithType.vb: RTFParagraph.New(RTFDocument)
+- uid: RTFExporter.RTFParagraph.#ctor*
+  name: RTFParagraph
+  href: api/RTFExporter.RTFParagraph.html#RTFExporter_RTFParagraph__ctor_
+  commentId: Overload:RTFExporter.RTFParagraph.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RTFExporter.RTFParagraph.RTFParagraph
+  fullName.vb: RTFExporter.RTFParagraph.New
+  nameWithType: RTFParagraph.RTFParagraph
+  nameWithType.vb: RTFParagraph.New
+- uid: RTFExporter.RTFParagraph.AppendText(System.String)
+  name: AppendText(string)
+  href: api/RTFExporter.RTFParagraph.html#RTFExporter_RTFParagraph_AppendText_System_String_
+  commentId: M:RTFExporter.RTFParagraph.AppendText(System.String)
+  name.vb: AppendText(String)
+  fullName: RTFExporter.RTFParagraph.AppendText(string)
+  fullName.vb: RTFExporter.RTFParagraph.AppendText(String)
+  nameWithType: RTFParagraph.AppendText(string)
+  nameWithType.vb: RTFParagraph.AppendText(String)
+- uid: RTFExporter.RTFParagraph.AppendText(System.String,RTFExporter.RTFTextStyle)
+  name: AppendText(string, RTFTextStyle)
+  href: api/RTFExporter.RTFParagraph.html#RTFExporter_RTFParagraph_AppendText_System_String_RTFExporter_RTFTextStyle_
+  commentId: M:RTFExporter.RTFParagraph.AppendText(System.String,RTFExporter.RTFTextStyle)
+  name.vb: AppendText(String, RTFTextStyle)
+  fullName: RTFExporter.RTFParagraph.AppendText(string, RTFExporter.RTFTextStyle)
+  fullName.vb: RTFExporter.RTFParagraph.AppendText(String, RTFExporter.RTFTextStyle)
+  nameWithType: RTFParagraph.AppendText(string, RTFTextStyle)
+  nameWithType.vb: RTFParagraph.AppendText(String, RTFTextStyle)
+- uid: RTFExporter.RTFParagraph.AppendText*
+  name: AppendText
+  href: api/RTFExporter.RTFParagraph.html#RTFExporter_RTFParagraph_AppendText_
+  commentId: Overload:RTFExporter.RTFParagraph.AppendText
+  isSpec: "True"
+  fullName: RTFExporter.RTFParagraph.AppendText
+  nameWithType: RTFParagraph.AppendText
+- uid: RTFExporter.RTFParagraph.Style
+  name: Style
+  href: api/RTFExporter.RTFParagraph.html#RTFExporter_RTFParagraph_Style
+  commentId: P:RTFExporter.RTFParagraph.Style
+  fullName: RTFExporter.RTFParagraph.Style
+  nameWithType: RTFParagraph.Style
+- uid: RTFExporter.RTFParagraph.Style*
+  name: Style
+  href: api/RTFExporter.RTFParagraph.html#RTFExporter_RTFParagraph_Style_
+  commentId: Overload:RTFExporter.RTFParagraph.Style
+  isSpec: "True"
+  fullName: RTFExporter.RTFParagraph.Style
+  nameWithType: RTFParagraph.Style
+- uid: RTFExporter.RTFParagraph.Text
+  name: Text
+  href: api/RTFExporter.RTFParagraph.html#RTFExporter_RTFParagraph_Text
+  commentId: P:RTFExporter.RTFParagraph.Text
+  fullName: RTFExporter.RTFParagraph.Text
+  nameWithType: RTFParagraph.Text
+- uid: RTFExporter.RTFParagraph.Text*
+  name: Text
+  href: api/RTFExporter.RTFParagraph.html#RTFExporter_RTFParagraph_Text_
+  commentId: Overload:RTFExporter.RTFParagraph.Text
+  isSpec: "True"
+  fullName: RTFExporter.RTFParagraph.Text
+  nameWithType: RTFParagraph.Text
+- uid: RTFExporter.RTFParagraphStyle
+  name: RTFParagraphStyle
+  href: api/RTFExporter.RTFParagraphStyle.html
+  commentId: T:RTFExporter.RTFParagraphStyle
+  fullName: RTFExporter.RTFParagraphStyle
+  nameWithType: RTFParagraphStyle
+- uid: RTFExporter.RTFParagraphStyle.#ctor(RTFExporter.Alignment)
+  name: RTFParagraphStyle(Alignment)
+  href: api/RTFExporter.RTFParagraphStyle.html#RTFExporter_RTFParagraphStyle__ctor_RTFExporter_Alignment_
+  commentId: M:RTFExporter.RTFParagraphStyle.#ctor(RTFExporter.Alignment)
+  name.vb: New(Alignment)
+  fullName: RTFExporter.RTFParagraphStyle.RTFParagraphStyle(RTFExporter.Alignment)
+  fullName.vb: RTFExporter.RTFParagraphStyle.New(RTFExporter.Alignment)
+  nameWithType: RTFParagraphStyle.RTFParagraphStyle(Alignment)
+  nameWithType.vb: RTFParagraphStyle.New(Alignment)
+- uid: RTFExporter.RTFParagraphStyle.#ctor(RTFExporter.Alignment,RTFExporter.Indent)
+  name: RTFParagraphStyle(Alignment, Indent)
+  href: api/RTFExporter.RTFParagraphStyle.html#RTFExporter_RTFParagraphStyle__ctor_RTFExporter_Alignment_RTFExporter_Indent_
+  commentId: M:RTFExporter.RTFParagraphStyle.#ctor(RTFExporter.Alignment,RTFExporter.Indent)
+  name.vb: New(Alignment, Indent)
+  fullName: RTFExporter.RTFParagraphStyle.RTFParagraphStyle(RTFExporter.Alignment, RTFExporter.Indent)
+  fullName.vb: RTFExporter.RTFParagraphStyle.New(RTFExporter.Alignment, RTFExporter.Indent)
+  nameWithType: RTFParagraphStyle.RTFParagraphStyle(Alignment, Indent)
+  nameWithType.vb: RTFParagraphStyle.New(Alignment, Indent)
+- uid: RTFExporter.RTFParagraphStyle.#ctor(RTFExporter.Alignment,RTFExporter.Indent,System.Int32,System.Int32)
+  name: RTFParagraphStyle(Alignment, Indent, int, int)
+  href: api/RTFExporter.RTFParagraphStyle.html#RTFExporter_RTFParagraphStyle__ctor_RTFExporter_Alignment_RTFExporter_Indent_System_Int32_System_Int32_
+  commentId: M:RTFExporter.RTFParagraphStyle.#ctor(RTFExporter.Alignment,RTFExporter.Indent,System.Int32,System.Int32)
+  name.vb: New(Alignment, Indent, Integer, Integer)
+  fullName: RTFExporter.RTFParagraphStyle.RTFParagraphStyle(RTFExporter.Alignment, RTFExporter.Indent, int, int)
+  fullName.vb: RTFExporter.RTFParagraphStyle.New(RTFExporter.Alignment, RTFExporter.Indent, Integer, Integer)
+  nameWithType: RTFParagraphStyle.RTFParagraphStyle(Alignment, Indent, int, int)
+  nameWithType.vb: RTFParagraphStyle.New(Alignment, Indent, Integer, Integer)
+- uid: RTFExporter.RTFParagraphStyle.#ctor(RTFExporter.RTFDocument)
+  name: RTFParagraphStyle(RTFDocument)
+  href: api/RTFExporter.RTFParagraphStyle.html#RTFExporter_RTFParagraphStyle__ctor_RTFExporter_RTFDocument_
+  commentId: M:RTFExporter.RTFParagraphStyle.#ctor(RTFExporter.RTFDocument)
+  name.vb: New(RTFDocument)
+  fullName: RTFExporter.RTFParagraphStyle.RTFParagraphStyle(RTFExporter.RTFDocument)
+  fullName.vb: RTFExporter.RTFParagraphStyle.New(RTFExporter.RTFDocument)
+  nameWithType: RTFParagraphStyle.RTFParagraphStyle(RTFDocument)
+  nameWithType.vb: RTFParagraphStyle.New(RTFDocument)
+- uid: RTFExporter.RTFParagraphStyle.#ctor*
+  name: RTFParagraphStyle
+  href: api/RTFExporter.RTFParagraphStyle.html#RTFExporter_RTFParagraphStyle__ctor_
+  commentId: Overload:RTFExporter.RTFParagraphStyle.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RTFExporter.RTFParagraphStyle.RTFParagraphStyle
+  fullName.vb: RTFExporter.RTFParagraphStyle.New
+  nameWithType: RTFParagraphStyle.RTFParagraphStyle
+  nameWithType.vb: RTFParagraphStyle.New
+- uid: RTFExporter.RTFParagraphStyle.Alignment
+  name: Alignment
+  href: api/RTFExporter.RTFParagraphStyle.html#RTFExporter_RTFParagraphStyle_Alignment
+  commentId: P:RTFExporter.RTFParagraphStyle.Alignment
+  fullName: RTFExporter.RTFParagraphStyle.Alignment
+  nameWithType: RTFParagraphStyle.Alignment
+- uid: RTFExporter.RTFParagraphStyle.Alignment*
+  name: Alignment
+  href: api/RTFExporter.RTFParagraphStyle.html#RTFExporter_RTFParagraphStyle_Alignment_
+  commentId: Overload:RTFExporter.RTFParagraphStyle.Alignment
+  isSpec: "True"
+  fullName: RTFExporter.RTFParagraphStyle.Alignment
+  nameWithType: RTFParagraphStyle.Alignment
+- uid: RTFExporter.RTFParagraphStyle.Indent
+  name: Indent
+  href: api/RTFExporter.RTFParagraphStyle.html#RTFExporter_RTFParagraphStyle_Indent
+  commentId: P:RTFExporter.RTFParagraphStyle.Indent
+  fullName: RTFExporter.RTFParagraphStyle.Indent
+  nameWithType: RTFParagraphStyle.Indent
+- uid: RTFExporter.RTFParagraphStyle.Indent*
+  name: Indent
+  href: api/RTFExporter.RTFParagraphStyle.html#RTFExporter_RTFParagraphStyle_Indent_
+  commentId: Overload:RTFExporter.RTFParagraphStyle.Indent
+  isSpec: "True"
+  fullName: RTFExporter.RTFParagraphStyle.Indent
+  nameWithType: RTFParagraphStyle.Indent
+- uid: RTFExporter.RTFParagraphStyle.SpaceAfter
+  name: SpaceAfter
+  href: api/RTFExporter.RTFParagraphStyle.html#RTFExporter_RTFParagraphStyle_SpaceAfter
+  commentId: P:RTFExporter.RTFParagraphStyle.SpaceAfter
+  fullName: RTFExporter.RTFParagraphStyle.SpaceAfter
+  nameWithType: RTFParagraphStyle.SpaceAfter
+- uid: RTFExporter.RTFParagraphStyle.SpaceAfter*
+  name: SpaceAfter
+  href: api/RTFExporter.RTFParagraphStyle.html#RTFExporter_RTFParagraphStyle_SpaceAfter_
+  commentId: Overload:RTFExporter.RTFParagraphStyle.SpaceAfter
+  isSpec: "True"
+  fullName: RTFExporter.RTFParagraphStyle.SpaceAfter
+  nameWithType: RTFParagraphStyle.SpaceAfter
+- uid: RTFExporter.RTFParagraphStyle.SpaceBefore
+  name: SpaceBefore
+  href: api/RTFExporter.RTFParagraphStyle.html#RTFExporter_RTFParagraphStyle_SpaceBefore
+  commentId: P:RTFExporter.RTFParagraphStyle.SpaceBefore
+  fullName: RTFExporter.RTFParagraphStyle.SpaceBefore
+  nameWithType: RTFParagraphStyle.SpaceBefore
+- uid: RTFExporter.RTFParagraphStyle.SpaceBefore*
+  name: SpaceBefore
+  href: api/RTFExporter.RTFParagraphStyle.html#RTFExporter_RTFParagraphStyle_SpaceBefore_
+  commentId: Overload:RTFExporter.RTFParagraphStyle.SpaceBefore
+  isSpec: "True"
+  fullName: RTFExporter.RTFParagraphStyle.SpaceBefore
+  nameWithType: RTFParagraphStyle.SpaceBefore
+- uid: RTFExporter.RTFParser
+  name: RTFParser
+  href: api/RTFExporter.RTFParser.html
+  commentId: T:RTFExporter.RTFParser
+  fullName: RTFExporter.RTFParser
+  nameWithType: RTFParser
+- uid: RTFExporter.RTFParser.Document
+  name: Document
+  href: api/RTFExporter.RTFParser.html#RTFExporter_RTFParser_Document
+  commentId: P:RTFExporter.RTFParser.Document
+  fullName: RTFExporter.RTFParser.Document
+  nameWithType: RTFParser.Document
+- uid: RTFExporter.RTFParser.Document*
+  name: Document
+  href: api/RTFExporter.RTFParser.html#RTFExporter_RTFParser_Document_
+  commentId: Overload:RTFExporter.RTFParser.Document
+  isSpec: "True"
+  fullName: RTFExporter.RTFParser.Document
+  nameWithType: RTFParser.Document
+- uid: RTFExporter.RTFParser.ToFile(System.String,RTFExporter.RTFDocument)
+  name: ToFile(string, RTFDocument)
+  href: api/RTFExporter.RTFParser.html#RTFExporter_RTFParser_ToFile_System_String_RTFExporter_RTFDocument_
+  commentId: M:RTFExporter.RTFParser.ToFile(System.String,RTFExporter.RTFDocument)
+  name.vb: ToFile(String, RTFDocument)
+  fullName: RTFExporter.RTFParser.ToFile(string, RTFExporter.RTFDocument)
+  fullName.vb: RTFExporter.RTFParser.ToFile(String, RTFExporter.RTFDocument)
+  nameWithType: RTFParser.ToFile(string, RTFDocument)
+  nameWithType.vb: RTFParser.ToFile(String, RTFDocument)
+- uid: RTFExporter.RTFParser.ToFile(System.String,System.String)
+  name: ToFile(string, string)
+  href: api/RTFExporter.RTFParser.html#RTFExporter_RTFParser_ToFile_System_String_System_String_
+  commentId: M:RTFExporter.RTFParser.ToFile(System.String,System.String)
+  name.vb: ToFile(String, String)
+  fullName: RTFExporter.RTFParser.ToFile(string, string)
+  fullName.vb: RTFExporter.RTFParser.ToFile(String, String)
+  nameWithType: RTFParser.ToFile(string, string)
+  nameWithType.vb: RTFParser.ToFile(String, String)
+- uid: RTFExporter.RTFParser.ToFile*
+  name: ToFile
+  href: api/RTFExporter.RTFParser.html#RTFExporter_RTFParser_ToFile_
+  commentId: Overload:RTFExporter.RTFParser.ToFile
+  isSpec: "True"
+  fullName: RTFExporter.RTFParser.ToFile
+  nameWithType: RTFParser.ToFile
+- uid: RTFExporter.RTFParser.ToString(RTFExporter.RTFDocument)
+  name: ToString(RTFDocument)
+  href: api/RTFExporter.RTFParser.html#RTFExporter_RTFParser_ToString_RTFExporter_RTFDocument_
+  commentId: M:RTFExporter.RTFParser.ToString(RTFExporter.RTFDocument)
+  fullName: RTFExporter.RTFParser.ToString(RTFExporter.RTFDocument)
+  nameWithType: RTFParser.ToString(RTFDocument)
+- uid: RTFExporter.RTFParser.ToString*
+  name: ToString
+  href: api/RTFExporter.RTFParser.html#RTFExporter_RTFParser_ToString_
+  commentId: Overload:RTFExporter.RTFParser.ToString
+  isSpec: "True"
+  fullName: RTFExporter.RTFParser.ToString
+  nameWithType: RTFParser.ToString
+- uid: RTFExporter.RTFText
+  name: RTFText
+  href: api/RTFExporter.RTFText.html
+  commentId: T:RTFExporter.RTFText
+  fullName: RTFExporter.RTFText
+  nameWithType: RTFText
+- uid: RTFExporter.RTFText.#ctor(RTFExporter.RTFParagraph,System.String)
+  name: RTFText(RTFParagraph, string)
+  href: api/RTFExporter.RTFText.html#RTFExporter_RTFText__ctor_RTFExporter_RTFParagraph_System_String_
+  commentId: M:RTFExporter.RTFText.#ctor(RTFExporter.RTFParagraph,System.String)
+  name.vb: New(RTFParagraph, String)
+  fullName: RTFExporter.RTFText.RTFText(RTFExporter.RTFParagraph, string)
+  fullName.vb: RTFExporter.RTFText.New(RTFExporter.RTFParagraph, String)
+  nameWithType: RTFText.RTFText(RTFParagraph, string)
+  nameWithType.vb: RTFText.New(RTFParagraph, String)
+- uid: RTFExporter.RTFText.#ctor(RTFExporter.RTFParagraph,System.String,RTFExporter.RTFTextStyle)
+  name: RTFText(RTFParagraph, string, RTFTextStyle)
+  href: api/RTFExporter.RTFText.html#RTFExporter_RTFText__ctor_RTFExporter_RTFParagraph_System_String_RTFExporter_RTFTextStyle_
+  commentId: M:RTFExporter.RTFText.#ctor(RTFExporter.RTFParagraph,System.String,RTFExporter.RTFTextStyle)
+  name.vb: New(RTFParagraph, String, RTFTextStyle)
+  fullName: RTFExporter.RTFText.RTFText(RTFExporter.RTFParagraph, string, RTFExporter.RTFTextStyle)
+  fullName.vb: RTFExporter.RTFText.New(RTFExporter.RTFParagraph, String, RTFExporter.RTFTextStyle)
+  nameWithType: RTFText.RTFText(RTFParagraph, string, RTFTextStyle)
+  nameWithType.vb: RTFText.New(RTFParagraph, String, RTFTextStyle)
+- uid: RTFExporter.RTFText.#ctor*
+  name: RTFText
+  href: api/RTFExporter.RTFText.html#RTFExporter_RTFText__ctor_
+  commentId: Overload:RTFExporter.RTFText.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RTFExporter.RTFText.RTFText
+  fullName.vb: RTFExporter.RTFText.New
+  nameWithType: RTFText.RTFText
+  nameWithType.vb: RTFText.New
+- uid: RTFExporter.RTFText.Content
+  name: Content
+  href: api/RTFExporter.RTFText.html#RTFExporter_RTFText_Content
+  commentId: P:RTFExporter.RTFText.Content
+  fullName: RTFExporter.RTFText.Content
+  nameWithType: RTFText.Content
+- uid: RTFExporter.RTFText.Content*
+  name: Content
+  href: api/RTFExporter.RTFText.html#RTFExporter_RTFText_Content_
+  commentId: Overload:RTFExporter.RTFText.Content
+  isSpec: "True"
+  fullName: RTFExporter.RTFText.Content
+  nameWithType: RTFText.Content
+- uid: RTFExporter.RTFText.SetStyle
+  name: SetStyle()
+  href: api/RTFExporter.RTFText.html#RTFExporter_RTFText_SetStyle
+  commentId: M:RTFExporter.RTFText.SetStyle
+  fullName: RTFExporter.RTFText.SetStyle()
+  nameWithType: RTFText.SetStyle()
+- uid: RTFExporter.RTFText.SetStyle(RTFExporter.Color,System.Boolean,System.Boolean,System.Int32,System.String)
+  name: SetStyle(Color, bool, bool, int, string)
+  href: api/RTFExporter.RTFText.html#RTFExporter_RTFText_SetStyle_RTFExporter_Color_System_Boolean_System_Boolean_System_Int32_System_String_
+  commentId: M:RTFExporter.RTFText.SetStyle(RTFExporter.Color,System.Boolean,System.Boolean,System.Int32,System.String)
+  name.vb: SetStyle(Color, Boolean, Boolean, Integer, String)
+  fullName: RTFExporter.RTFText.SetStyle(RTFExporter.Color, bool, bool, int, string)
+  fullName.vb: RTFExporter.RTFText.SetStyle(RTFExporter.Color, Boolean, Boolean, Integer, String)
+  nameWithType: RTFText.SetStyle(Color, bool, bool, int, string)
+  nameWithType.vb: RTFText.SetStyle(Color, Boolean, Boolean, Integer, String)
+- uid: RTFExporter.RTFText.SetStyle(RTFExporter.Color,System.Int32,System.String)
+  name: SetStyle(Color, int, string)
+  href: api/RTFExporter.RTFText.html#RTFExporter_RTFText_SetStyle_RTFExporter_Color_System_Int32_System_String_
+  commentId: M:RTFExporter.RTFText.SetStyle(RTFExporter.Color,System.Int32,System.String)
+  name.vb: SetStyle(Color, Integer, String)
+  fullName: RTFExporter.RTFText.SetStyle(RTFExporter.Color, int, string)
+  fullName.vb: RTFExporter.RTFText.SetStyle(RTFExporter.Color, Integer, String)
+  nameWithType: RTFText.SetStyle(Color, int, string)
+  nameWithType.vb: RTFText.SetStyle(Color, Integer, String)
+- uid: RTFExporter.RTFText.SetStyle(System.Boolean,System.Boolean,RTFExporter.Underline,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  name: SetStyle(bool, bool, Underline, bool, bool, bool, bool)
+  href: api/RTFExporter.RTFText.html#RTFExporter_RTFText_SetStyle_System_Boolean_System_Boolean_RTFExporter_Underline_System_Boolean_System_Boolean_System_Boolean_System_Boolean_
+  commentId: M:RTFExporter.RTFText.SetStyle(System.Boolean,System.Boolean,RTFExporter.Underline,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  name.vb: SetStyle(Boolean, Boolean, Underline, Boolean, Boolean, Boolean, Boolean)
+  fullName: RTFExporter.RTFText.SetStyle(bool, bool, RTFExporter.Underline, bool, bool, bool, bool)
+  fullName.vb: RTFExporter.RTFText.SetStyle(Boolean, Boolean, RTFExporter.Underline, Boolean, Boolean, Boolean, Boolean)
+  nameWithType: RTFText.SetStyle(bool, bool, Underline, bool, bool, bool, bool)
+  nameWithType.vb: RTFText.SetStyle(Boolean, Boolean, Underline, Boolean, Boolean, Boolean, Boolean)
+- uid: RTFExporter.RTFText.SetStyle*
+  name: SetStyle
+  href: api/RTFExporter.RTFText.html#RTFExporter_RTFText_SetStyle_
+  commentId: Overload:RTFExporter.RTFText.SetStyle
+  isSpec: "True"
+  fullName: RTFExporter.RTFText.SetStyle
+  nameWithType: RTFText.SetStyle
+- uid: RTFExporter.RTFText.Style
+  name: Style
+  href: api/RTFExporter.RTFText.html#RTFExporter_RTFText_Style
+  commentId: P:RTFExporter.RTFText.Style
+  fullName: RTFExporter.RTFText.Style
+  nameWithType: RTFText.Style
+- uid: RTFExporter.RTFText.Style*
+  name: Style
+  href: api/RTFExporter.RTFText.html#RTFExporter_RTFText_Style_
+  commentId: Overload:RTFExporter.RTFText.Style
+  isSpec: "True"
+  fullName: RTFExporter.RTFText.Style
+  nameWithType: RTFText.Style
+- uid: RTFExporter.RTFTextStyle
+  name: RTFTextStyle
+  href: api/RTFExporter.RTFTextStyle.html
+  commentId: T:RTFExporter.RTFTextStyle
+  fullName: RTFExporter.RTFTextStyle
+  nameWithType: RTFTextStyle
+- uid: RTFExporter.RTFTextStyle.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.String,RTFExporter.Color,RTFExporter.Underline)
+  name: RTFTextStyle(bool, bool, bool, bool, bool, bool, int, string, Color, Underline)
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle__ctor_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Int32_System_String_RTFExporter_Color_RTFExporter_Underline_
+  commentId: M:RTFExporter.RTFTextStyle.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.String,RTFExporter.Color,RTFExporter.Underline)
+  name.vb: New(Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Integer, String, Color, Underline)
+  fullName: RTFExporter.RTFTextStyle.RTFTextStyle(bool, bool, bool, bool, bool, bool, int, string, RTFExporter.Color, RTFExporter.Underline)
+  fullName.vb: RTFExporter.RTFTextStyle.New(Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Integer, String, RTFExporter.Color, RTFExporter.Underline)
+  nameWithType: RTFTextStyle.RTFTextStyle(bool, bool, bool, bool, bool, bool, int, string, Color, Underline)
+  nameWithType.vb: RTFTextStyle.New(Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Integer, String, Color, Underline)
+- uid: RTFExporter.RTFTextStyle.#ctor(System.Boolean,System.Boolean,System.Int32,System.String,RTFExporter.Color)
+  name: RTFTextStyle(bool, bool, int, string, Color)
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle__ctor_System_Boolean_System_Boolean_System_Int32_System_String_RTFExporter_Color_
+  commentId: M:RTFExporter.RTFTextStyle.#ctor(System.Boolean,System.Boolean,System.Int32,System.String,RTFExporter.Color)
+  name.vb: New(Boolean, Boolean, Integer, String, Color)
+  fullName: RTFExporter.RTFTextStyle.RTFTextStyle(bool, bool, int, string, RTFExporter.Color)
+  fullName.vb: RTFExporter.RTFTextStyle.New(Boolean, Boolean, Integer, String, RTFExporter.Color)
+  nameWithType: RTFTextStyle.RTFTextStyle(bool, bool, int, string, Color)
+  nameWithType.vb: RTFTextStyle.New(Boolean, Boolean, Integer, String, Color)
+- uid: RTFExporter.RTFTextStyle.#ctor*
+  name: RTFTextStyle
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle__ctor_
+  commentId: Overload:RTFExporter.RTFTextStyle.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RTFExporter.RTFTextStyle.RTFTextStyle
+  fullName.vb: RTFExporter.RTFTextStyle.New
+  nameWithType: RTFTextStyle.RTFTextStyle
+  nameWithType.vb: RTFTextStyle.New
+- uid: RTFExporter.RTFTextStyle.AllCaps
+  name: AllCaps
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_AllCaps
+  commentId: P:RTFExporter.RTFTextStyle.AllCaps
+  fullName: RTFExporter.RTFTextStyle.AllCaps
+  nameWithType: RTFTextStyle.AllCaps
+- uid: RTFExporter.RTFTextStyle.AllCaps*
+  name: AllCaps
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_AllCaps_
+  commentId: Overload:RTFExporter.RTFTextStyle.AllCaps
+  isSpec: "True"
+  fullName: RTFExporter.RTFTextStyle.AllCaps
+  nameWithType: RTFTextStyle.AllCaps
+- uid: RTFExporter.RTFTextStyle.Bold
+  name: Bold
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_Bold
+  commentId: P:RTFExporter.RTFTextStyle.Bold
+  fullName: RTFExporter.RTFTextStyle.Bold
+  nameWithType: RTFTextStyle.Bold
+- uid: RTFExporter.RTFTextStyle.Bold*
+  name: Bold
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_Bold_
+  commentId: Overload:RTFExporter.RTFTextStyle.Bold
+  isSpec: "True"
+  fullName: RTFExporter.RTFTextStyle.Bold
+  nameWithType: RTFTextStyle.Bold
+- uid: RTFExporter.RTFTextStyle.Color
+  name: Color
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_Color
+  commentId: P:RTFExporter.RTFTextStyle.Color
+  fullName: RTFExporter.RTFTextStyle.Color
+  nameWithType: RTFTextStyle.Color
+- uid: RTFExporter.RTFTextStyle.Color*
+  name: Color
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_Color_
+  commentId: Overload:RTFExporter.RTFTextStyle.Color
+  isSpec: "True"
+  fullName: RTFExporter.RTFTextStyle.Color
+  nameWithType: RTFTextStyle.Color
+- uid: RTFExporter.RTFTextStyle.FontFamily
+  name: FontFamily
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_FontFamily
+  commentId: P:RTFExporter.RTFTextStyle.FontFamily
+  fullName: RTFExporter.RTFTextStyle.FontFamily
+  nameWithType: RTFTextStyle.FontFamily
+- uid: RTFExporter.RTFTextStyle.FontFamily*
+  name: FontFamily
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_FontFamily_
+  commentId: Overload:RTFExporter.RTFTextStyle.FontFamily
+  isSpec: "True"
+  fullName: RTFExporter.RTFTextStyle.FontFamily
+  nameWithType: RTFTextStyle.FontFamily
+- uid: RTFExporter.RTFTextStyle.FontSize
+  name: FontSize
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_FontSize
+  commentId: P:RTFExporter.RTFTextStyle.FontSize
+  fullName: RTFExporter.RTFTextStyle.FontSize
+  nameWithType: RTFTextStyle.FontSize
+- uid: RTFExporter.RTFTextStyle.FontSize*
+  name: FontSize
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_FontSize_
+  commentId: Overload:RTFExporter.RTFTextStyle.FontSize
+  isSpec: "True"
+  fullName: RTFExporter.RTFTextStyle.FontSize
+  nameWithType: RTFTextStyle.FontSize
+- uid: RTFExporter.RTFTextStyle.Italic
+  name: Italic
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_Italic
+  commentId: P:RTFExporter.RTFTextStyle.Italic
+  fullName: RTFExporter.RTFTextStyle.Italic
+  nameWithType: RTFTextStyle.Italic
+- uid: RTFExporter.RTFTextStyle.Italic*
+  name: Italic
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_Italic_
+  commentId: Overload:RTFExporter.RTFTextStyle.Italic
+  isSpec: "True"
+  fullName: RTFExporter.RTFTextStyle.Italic
+  nameWithType: RTFTextStyle.Italic
+- uid: RTFExporter.RTFTextStyle.Outline
+  name: Outline
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_Outline
+  commentId: P:RTFExporter.RTFTextStyle.Outline
+  fullName: RTFExporter.RTFTextStyle.Outline
+  nameWithType: RTFTextStyle.Outline
+- uid: RTFExporter.RTFTextStyle.Outline*
+  name: Outline
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_Outline_
+  commentId: Overload:RTFExporter.RTFTextStyle.Outline
+  isSpec: "True"
+  fullName: RTFExporter.RTFTextStyle.Outline
+  nameWithType: RTFTextStyle.Outline
+- uid: RTFExporter.RTFTextStyle.SmallCaps
+  name: SmallCaps
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_SmallCaps
+  commentId: P:RTFExporter.RTFTextStyle.SmallCaps
+  fullName: RTFExporter.RTFTextStyle.SmallCaps
+  nameWithType: RTFTextStyle.SmallCaps
+- uid: RTFExporter.RTFTextStyle.SmallCaps*
+  name: SmallCaps
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_SmallCaps_
+  commentId: Overload:RTFExporter.RTFTextStyle.SmallCaps
+  isSpec: "True"
+  fullName: RTFExporter.RTFTextStyle.SmallCaps
+  nameWithType: RTFTextStyle.SmallCaps
+- uid: RTFExporter.RTFTextStyle.StrikeThrough
+  name: StrikeThrough
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_StrikeThrough
+  commentId: P:RTFExporter.RTFTextStyle.StrikeThrough
+  fullName: RTFExporter.RTFTextStyle.StrikeThrough
+  nameWithType: RTFTextStyle.StrikeThrough
+- uid: RTFExporter.RTFTextStyle.StrikeThrough*
+  name: StrikeThrough
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_StrikeThrough_
+  commentId: Overload:RTFExporter.RTFTextStyle.StrikeThrough
+  isSpec: "True"
+  fullName: RTFExporter.RTFTextStyle.StrikeThrough
+  nameWithType: RTFTextStyle.StrikeThrough
+- uid: RTFExporter.RTFTextStyle.Underline
+  name: Underline
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_Underline
+  commentId: P:RTFExporter.RTFTextStyle.Underline
+  fullName: RTFExporter.RTFTextStyle.Underline
+  nameWithType: RTFTextStyle.Underline
+- uid: RTFExporter.RTFTextStyle.Underline*
+  name: Underline
+  href: api/RTFExporter.RTFTextStyle.html#RTFExporter_RTFTextStyle_Underline_
+  commentId: Overload:RTFExporter.RTFTextStyle.Underline
+  isSpec: "True"
+  fullName: RTFExporter.RTFTextStyle.Underline
+  nameWithType: RTFTextStyle.Underline
+- uid: RTFExporter.Underline
+  name: Underline
+  href: api/RTFExporter.Underline.html
+  commentId: T:RTFExporter.Underline
+  fullName: RTFExporter.Underline
+  nameWithType: Underline
+- uid: RTFExporter.Underline.Basic
+  name: Basic
+  href: api/RTFExporter.Underline.html#RTFExporter_Underline_Basic
+  commentId: F:RTFExporter.Underline.Basic
+  fullName: RTFExporter.Underline.Basic
+  nameWithType: Underline.Basic
+- uid: RTFExporter.Underline.Dash
+  name: Dash
+  href: api/RTFExporter.Underline.html#RTFExporter_Underline_Dash
+  commentId: F:RTFExporter.Underline.Dash
+  fullName: RTFExporter.Underline.Dash
+  nameWithType: Underline.Dash
+- uid: RTFExporter.Underline.DotDash
+  name: DotDash
+  href: api/RTFExporter.Underline.html#RTFExporter_Underline_DotDash
+  commentId: F:RTFExporter.Underline.DotDash
+  fullName: RTFExporter.Underline.DotDash
+  nameWithType: Underline.DotDash
+- uid: RTFExporter.Underline.Dotted
+  name: Dotted
+  href: api/RTFExporter.Underline.html#RTFExporter_Underline_Dotted
+  commentId: F:RTFExporter.Underline.Dotted
+  fullName: RTFExporter.Underline.Dotted
+  nameWithType: Underline.Dotted
+- uid: RTFExporter.Underline.Double
+  name: Double
+  href: api/RTFExporter.Underline.html#RTFExporter_Underline_Double
+  commentId: F:RTFExporter.Underline.Double
+  fullName: RTFExporter.Underline.Double
+  nameWithType: Underline.Double
+- uid: RTFExporter.Underline.None
+  name: None
+  href: api/RTFExporter.Underline.html#RTFExporter_Underline_None
+  commentId: F:RTFExporter.Underline.None
+  fullName: RTFExporter.Underline.None
+  nameWithType: Underline.None
+- uid: RTFExporter.Underline.Thick
+  name: Thick
+  href: api/RTFExporter.Underline.html#RTFExporter_Underline_Thick
+  commentId: F:RTFExporter.Underline.Thick
+  fullName: RTFExporter.Underline.Thick
+  nameWithType: Underline.Thick
+- uid: RTFExporter.Underline.Wave
+  name: Wave
+  href: api/RTFExporter.Underline.html#RTFExporter_Underline_Wave
+  commentId: F:RTFExporter.Underline.Wave
+  fullName: RTFExporter.Underline.Wave
+  nameWithType: Underline.Wave
+- uid: RTFExporter.Underline.WordsOnly
+  name: WordsOnly
+  href: api/RTFExporter.Underline.html#RTFExporter_Underline_WordsOnly
+  commentId: F:RTFExporter.Underline.WordsOnly
+  fullName: RTFExporter.Underline.WordsOnly
+  nameWithType: Underline.WordsOnly
+- uid: RTFExporter.Units
+  name: Units
+  href: api/RTFExporter.Units.html
+  commentId: T:RTFExporter.Units
+  fullName: RTFExporter.Units
+  nameWithType: Units
+- uid: RTFExporter.Units.Centimeters
+  name: Centimeters
+  href: api/RTFExporter.Units.html#RTFExporter_Units_Centimeters
+  commentId: F:RTFExporter.Units.Centimeters
+  fullName: RTFExporter.Units.Centimeters
+  nameWithType: Units.Centimeters
+- uid: RTFExporter.Units.Inch
+  name: Inch
+  href: api/RTFExporter.Units.html#RTFExporter_Units_Inch
+  commentId: F:RTFExporter.Units.Inch
+  fullName: RTFExporter.Units.Inch
+  nameWithType: Units.Inch
+- uid: RTFExporter.Units.Millimeters
+  name: Millimeters
+  href: api/RTFExporter.Units.html#RTFExporter_Units_Millimeters
+  commentId: F:RTFExporter.Units.Millimeters
+  fullName: RTFExporter.Units.Millimeters
+  nameWithType: Units.Millimeters

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>RTFExporter | RTFExporter Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="RTFExporter | RTFExporter Documentation ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/leonaaraujo/RTFExporter/blob/main/RTFExporter.docs/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="RTFExporter">
+            RTFExporter
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="rtfexporter">RTFExporter</h1>
+
+<p><strong>A lightweight, zero-dependency C# library for generating styled .RTF documents from code.</strong></p>
+<p><a href="https://www.nuget.org/packages/RTFExporter"><img src="https://img.shields.io/nuget/v/RTFExporter.svg" alt="NuGet Version"></a>
+<img src="https://img.shields.io/badge/Framework-.NET%20Standard%202.0-blue.svg" alt="Framework">
+<img src="https://img.shields.io/badge/License-WTFPL%202.0-green.svg" alt="License"></p>
+<hr>
+<h2 id="why-rtfexporter">Why RTFExporter?</h2>
+<p>Generating formatted word processor documents programmatically often forces developers into bloated dependencies, complex OpenXML wrappers, or restrictive commercial licensing. <strong>RTFExporter</strong> solves this by providing an intuitive, object-oriented C# API that builds <strong>Rich Text Format (RTF 1.5)</strong> files with zero external dependencies.</p>
+<p>Whether you need to generate automated business reports, export text logs with syntax highlighting, or build downloadable documents in ASP.NET Core microservices, RTFExporter delivers maximum compatibility and performance.</p>
+<hr>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li><strong>Zero Dependencies</strong>: Pure C# implementation targeting <code>.NET Standard 2.0</code> (compatible with .NET Framework 4.6.1+, .NET Core 2.0+, and modern .NET 5/6/8/10).</li>
+<li><strong>IDisposable Resource Safety</strong>: Seamlessly manage file streams with C# <code>using</code> blocks that automatically serialize and flush on disposal.</li>
+<li><strong>Rich Page Setup</strong>: Configure page dimensions, portrait or landscape orientation, custom margins, and measurement units (<code>Inches</code>, <code>Millimeters</code>, or <code>Centimeters</code>).</li>
+<li><strong>Comprehensive Paragraph Styling</strong>: Precise control over horizontal alignments (<code>Left</code>, <code>Center</code>, <code>Right</code>, <code>Justified</code>), multi-level indentation (<code>First Line</code>, <code>Left</code>, <code>Right</code>), and vertical paragraph spacing.</li>
+<li><strong>Full Typography &amp; Color Support</strong>: Manage RGB font colors, font families, font sizes, and character decorations (<code>Bold</code>, <code>Italic</code>, <code>Small Caps</code>, <code>All Caps</code>, <code>Strikethrough</code>, <code>Outline</code>, and <strong>8 Underline styles</strong>).</li>
+<li><strong>Flexible Export Targets</strong>: Save directly to disk paths, write to existing <code>Stream</code> objects, or export directly to string payloads for web APIs.</li>
+</ul>
+<hr>
+<h2 id="quick-example">Quick Example</h2>
+<pre><code class="lang-csharp">using RTFExporter;
+
+// Create a new RTF document saved directly to disk
+using (RTFDocument doc = new RTFDocument(&quot;Report.rtf&quot;))
+{
+    // Append a centered title paragraph
+    RTFParagraph titlePar = doc.AppendParagraph(Alignment.Center);
+    titlePar.AppendText(&quot;Monthly Executive Summary&quot;, new RTFTextStyle(
+        italic: false, 
+        bold: true, 
+        fontSize: 18, 
+        fontFamily: &quot;Calibri&quot;, 
+        color: Color.blue
+    ));
+
+    // Append body content with indentation and spacing
+    RTFParagraph bodyPar = doc.AppendParagraph(new Indent(firstLine: 0.5f, left: 0f, right: 0f));
+    bodyPar.style.spaceBefore = 200; // 200 twips vertical spacing
+    
+    bodyPar.AppendText(&quot;Total revenue increased by 14.2% compared to last quarter. &quot;);
+    
+    RTFText highlight = bodyPar.AppendText(&quot;Action required immediately.&quot;);
+    highlight.style.color = Color.red;
+    highlight.style.underline = Underline.Wave;
+}
+</code></pre>
+<hr>
+<h2 id="next-steps">Next Steps</h2>
+<p>Explore the documentation to master document generation:</p>
+<ul>
+<li><a href="docs/introduction.html"><strong>Conceptual Introduction</strong></a> — Learn how RTF syntax works and RTFExporter's architectural design.</li>
+<li><a href="docs/getting-started.html"><strong>Getting Started Guide</strong></a> — Step-by-step instructions for installation and creating your first documents.</li>
+<li><a href="docs/styling-guide.html"><strong>Styling &amp; Formatting Guide</strong></a> — Master page margins, paragraph indentation, colors, and typography.</li>
+<li><a class="xref" href="api/RTFExporter.html"><strong>API Reference</strong></a> — Detailed class and method documentation.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/leonaaraujo/RTFExporter/blob/main/RTFExporter.docs/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

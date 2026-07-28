@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Introduction &amp; Concepts | RTFExporter Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Introduction &amp; Concepts | RTFExporter Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/leonaaraujo/RTFExporter/blob/main/RTFExporter.docs/docs/introduction.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="RTFExporter">
+            RTFExporter
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="introduction--concepts">Introduction &amp; Concepts</h1>
+
+<p>Welcome to the conceptual documentation for <strong>RTFExporter</strong>. This guide explains the core ideas behind Rich Text Format (RTF), why it remains a crucial format in modern software development, and how RTFExporter abstracts the underlying syntax into a clean C# object hierarchy.</p>
+<hr>
+<h2 id="what-is-rich-text-format-rtf">What is Rich Text Format (RTF)?</h2>
+<p>Developed by Microsoft in 1987, <strong>Rich Text Format (RTF)</strong> is a universal file specification for document exchange across word processors and operating systems. Unlike plain text (<code>.txt</code>), RTF supports rich typographic styling, colors, font families, margins, and complex layout blocks.</p>
+<p>Unlike modern OpenXML formats (<code>.docx</code>), which are zipped archives of complex XML schemas and directory hierarchies, <strong>RTF files are plain 7-bit ASCII text streams</strong> formatted with control words and symbols. For example, a minimal RTF document looks like this under the hood:</p>
+<pre><code class="lang-rtf">{\rtf1\ansi\deff0
+{\fonttbl{\f0 Calibri;}}
+{\colortbl;\red0\green0\blue0;\red255\green0\blue0;}
+\paperw12240\paperh15840\margl1440\margr1440
+\pard\f0\fs24 This is standard black text. \cf2\b This text is bold and red!\b0\cf1\par
+}
+</code></pre>
+<h3 id="advantages-of-rtf-generation">Advantages of RTF Generation</h3>
+<ol>
+<li><strong>Universal Compatibility</strong>: Every major operating system opens RTF files out of the box (Microsoft WordPad, MS Word, macOS TextEdit, LibreOffice Writer, Google Docs).</li>
+<li><strong>Speed &amp; Efficiency</strong>: Because RTF is a continuous stream of plain text control codes, generating it in memory is orders of magnitude faster than building zip archives or rendering PDF layout engines.</li>
+<li><strong>Streamable Payloads</strong>: Ideal for serverless endpoints, email attachments, and web APIs where lightweight string generation is critical.</li>
+</ol>
+<hr>
+<h2 id="architectural-overview-of-rtfexporter">Architectural Overview of RTFExporter</h2>
+<p><strong>RTFExporter</strong> bridges object-oriented C# concepts directly to RTF control word generation without requiring third-party layout engines or COM interop dependencies.</p>
+<p>The library is organized around three primary domain entities:</p>
+<pre><code>+-------------------------------------------------------------+
+|                         RTFDocument                         |
+|  (Manages Color Table, Font Table, Page Setup, Metadata)    |
++-------------------------------------------------------------+
+                               |
+                               | 1 : N
+                               v
++-------------------------------------------------------------+
+|                        RTFParagraph                         |
+|  (Manages Indentation, Alignment, Spacing before/after)     |
++-------------------------------------------------------------+
+                               |
+                               | 1 : N
+                               v
++-------------------------------------------------------------+
+|                           RTFText                           |
+|  (Manages Raw Content string and Character Styling options) |
++-------------------------------------------------------------+
+</code></pre>
+<h3 id="1-rtfdocument-root-container">1. <code>RTFDocument</code> (Root Container)</h3>
+<p>The <code>RTFDocument</code> class represents the entire physical document. It maintains:</p>
+<ul>
+<li><strong>Global Tables</strong>: Automatically tracks every distinct <code>Color</code> and <code>fontFamily</code> used in child elements and compiles them into the mandatory <code>\colortbl</code> and <code>\fonttbl</code> headers upon export.</li>
+<li><strong>Page Geometry</strong>: Controls physical dimensions (<code>width</code>, <code>height</code>), <code>Orientation</code> (<code>Portrait</code> or <code>Landscape</code>), measurement <code>Units</code> (<code>Inch</code>, <code>Millimeters</code>, <code>Centimeters</code>), and margins.</li>
+<li><strong>Resource Management</strong>: Implements <code>IDisposable</code>. When instantiated with a file path or stream inside a <code>using</code> block, disposing the document automatically invokes <code>RTFParser.ToString(this)</code> and flushes the output stream.</li>
+</ul>
+<h3 id="2-rtfparagraph-structural-block">2. <code>RTFParagraph</code> (Structural Block)</h3>
+<p>In RTF, paragraphs are separated by the <code>\par</code> control word. Every paragraph belongs to an <code>RTFDocument</code> and contains a sequential list of <code>RTFText</code> runs.</p>
+<ul>
+<li>Paragraphs hold an <code>RTFParagraphStyle</code> object specifying horizontal alignment (<code>\ql</code>, <code>\qr</code>, <code>\qc</code>, <code>\qj</code>), first-line indent (<code>\fi</code>), block margins (<code>\li</code>, <code>\ri</code>), and vertical twip spacing (<code>\sb</code>, <code>\sa</code>).</li>
+</ul>
+<h3 id="3-rtftext-formatted-character-segment">3. <code>RTFText</code> (Formatted Character Segment)</h3>
+<p>Any piece of text within a paragraph is represented by <code>RTFText</code>. Multiple text runs within the same paragraph allow you to change styles on the fly without breaking the paragraph line.</p>
+<ul>
+<li>Each <code>RTFText</code> segment carries an <code>RTFTextStyle</code> object detailing typography points (<code>fontSize</code>), font family names, RGB colors, bold/italic toggles, and underline decorations.</li>
+</ul>
+<hr>
+<h2 id="understanding-measurement-units-and-twips">Understanding Measurement Units and Twips</h2>
+<p>Internally, word processors and RTF specifications measure vertical spacing and font sizes in specialized typographical units:</p>
+<ul>
+<li><strong>Twip</strong>: A twentieth of a typographical point (<span class="math">\(1/1440\)</span> of an inch). When you configure paragraph vertical spacing (<code>spaceBefore</code> or <code>spaceAfter</code>), the integer values represent twips (e.g., <code>200</code> twips <span class="math">\(\approx 10\)</span> points of vertical space).</li>
+<li><strong>Points</strong>: Font sizes (<code>fontSize</code>) in <code>RTFTextStyle</code> are specified in standard typographical points (e.g., <code>12</code> for 12pt text). RTFExporter automatically scales these during parsing into half-points (<code>\fs24</code>) as required by the RTF specification.</li>
+</ul>
+<hr>
+<h2 id="next-steps">Next Steps</h2>
+<p>Now that you understand the concepts behind RTFExporter, proceed to the <a href="getting-started.html">Getting Started Guide</a> to start building your first document.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/leonaaraujo/RTFExporter/blob/main/RTFExporter.docs/docs/introduction.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
