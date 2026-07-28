@@ -1,19 +1,13 @@
-using System.Collections.Generic;
-
 namespace RTFExporter
 {
+  using System.Collections.Generic;
+
   /// <summary>
   /// Represents a structural paragraph block inside an RTF document (<c>\par</c>).
   /// Contains a collection of text segments and paragraph-level styling.
   /// </summary>
   public class RTFParagraph
   {
-    /// <summary>The sequential list of text runs contained inside this paragraph.</summary>
-    public List<RTFText> text = new List<RTFText>();
-
-    /// <summary>The paragraph-level styling configuration (alignment, indentation, spacing).</summary>
-    public RTFParagraphStyle style;
-
     /// <summary>
     /// Initializes a new instance of the <see cref="RTFParagraph"/> class and automatically appends it to the specified document.
     /// </summary>
@@ -21,9 +15,16 @@ namespace RTFExporter
     /// <seealso cref="RTFExporter.RTFDocument"/>
     public RTFParagraph(RTFDocument document)
     {
-      style = new RTFParagraphStyle(document);
-      document.paragraphs.Add(this);
+      this.Text = new List<RTFText>();
+      this.Style = new RTFParagraphStyle(document);
+      document.Paragraphs.Add(this);
     }
+
+    /// <summary>Gets or sets the sequential list of text runs contained inside this paragraph.</summary>
+    public List<RTFText> Text { get; set; }
+
+    /// <summary>Gets or sets the paragraph-level styling configuration (alignment, indentation, spacing).</summary>
+    public RTFParagraphStyle Style { get; set; }
 
     /// <summary>
     /// Appends a new unformatted text run to this paragraph.

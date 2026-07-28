@@ -12,43 +12,43 @@ namespace RTFExporter.test
             var par = new RTFParagraph(doc);
 
             var text = new RTFText(par, "Hello World");
-            Assert.Equal("Hello World", text.content);
-            Assert.Contains(text, par.text);
+            Assert.Equal("Hello World", text.Content);
+            Assert.Contains(text, par.Text);
 
-            var customStyle = new RTFTextStyle(true, false, 12, "Arial", Color.red);
+            var customStyle = new RTFTextStyle(true, false, 12, "Arial", Color.Red);
             var textWithStyle = new RTFText(par, "With Style", customStyle);
-            Assert.Same(customStyle, textWithStyle.style);
+            Assert.Same(customStyle, textWithStyle.Style);
 
             // Test SetStyle default overload
             var t1 = par.AppendText("Test").SetStyle();
-            Assert.Equal("Calibri", t1.style.fontFamily);
-            Assert.Equal(12, t1.style.fontSize);
-            Assert.Equal(Color.black, t1.style.color);
-            Assert.Equal(Underline.None, t1.style.underline);
+            Assert.Equal("Calibri", t1.Style.FontFamily);
+            Assert.Equal(12, t1.Style.FontSize);
+            Assert.Equal(Color.Black, t1.Style.Color);
+            Assert.Equal(Underline.None, t1.Style.Underline);
 
             // Test SetStyle overload 2
-            var t2 = par.AppendText("Test").SetStyle(Color.blue, 16, "Verdana");
-            Assert.Equal(Color.blue, t2.style.color);
-            Assert.Equal(16, t2.style.fontSize);
-            Assert.Equal("Verdana", t2.style.fontFamily);
+            var t2 = par.AppendText("Test").SetStyle(Color.Blue, 16, "Verdana");
+            Assert.Equal(Color.Blue, t2.Style.Color);
+            Assert.Equal(16, t2.Style.FontSize);
+            Assert.Equal("Verdana", t2.Style.FontFamily);
 
             // Test SetStyle overload 3
-            var t3 = par.AppendText("Test").SetStyle(Color.green, true, true, 20, "Courier");
-            Assert.Equal(Color.green, t3.style.color);
-            Assert.True(t3.style.italic);
-            Assert.True(t3.style.bold);
-            Assert.Equal(20, t3.style.fontSize);
-            Assert.Equal("Courier", t3.style.fontFamily);
+            var t3 = par.AppendText("Test").SetStyle(Color.Green, true, true, 20, "Courier");
+            Assert.Equal(Color.Green, t3.Style.Color);
+            Assert.True(t3.Style.Italic);
+            Assert.True(t3.Style.Bold);
+            Assert.Equal(20, t3.Style.FontSize);
+            Assert.Equal("Courier", t3.Style.FontFamily);
 
             // Test SetStyle overload 4
             var t4 = par.AppendText("Test").SetStyle(true, true, Underline.Wave, true, true, false, true);
-            Assert.True(t4.style.italic);
-            Assert.True(t4.style.bold);
-            Assert.Equal(Underline.Wave, t4.style.underline);
-            Assert.True(t4.style.smallCaps);
-            Assert.True(t4.style.strikeThrough);
-            Assert.False(t4.style.allCaps);
-            Assert.True(t4.style.outline);
+            Assert.True(t4.Style.Italic);
+            Assert.True(t4.Style.Bold);
+            Assert.Equal(Underline.Wave, t4.Style.Underline);
+            Assert.True(t4.Style.SmallCaps);
+            Assert.True(t4.Style.StrikeThrough);
+            Assert.False(t4.Style.AllCaps);
+            Assert.True(t4.Style.Outline);
         }
 
         [Fact]
@@ -56,17 +56,17 @@ namespace RTFExporter.test
         {
             var doc = new RTFDocument();
             var par = new RTFParagraph(doc);
-            Assert.Contains(par, doc.paragraphs);
+            Assert.Contains(par, doc.Paragraphs);
 
             var t1 = par.AppendText("First run");
-            Assert.Equal("First run", t1.content);
-            Assert.Contains(t1, par.text);
+            Assert.Equal("First run", t1.Content);
+            Assert.Contains(t1, par.Text);
 
-            var style = new RTFTextStyle(false, true, 14, "Arial", Color.blue);
+            var style = new RTFTextStyle(false, true, 14, "Arial", Color.Blue);
             var t2 = par.AppendText("Second run", style);
-            Assert.Equal("Second run", t2.content);
-            Assert.Same(style, t2.style);
-            Assert.Equal(2, par.text.Count);
+            Assert.Equal("Second run", t2.Content);
+            Assert.Same(style, t2.Style);
+            Assert.Equal(2, par.Text.Count);
         }
     }
 }

@@ -12,19 +12,19 @@ namespace RTFExporter.test
         public void RTFDocument_Constructors_WorkCorrectly()
         {
             var d1 = new RTFDocument();
-            Assert.Equal(8f, d1.width);
-            Assert.Equal(11f, d1.height);
-            Assert.Equal(Orientation.Portrait, d1.orientation);
-            Assert.Equal(Units.Inch, d1.units);
+            Assert.Equal(8f, d1.Width);
+            Assert.Equal(11f, d1.Height);
+            Assert.Equal(Orientation.Portrait, d1.Orientation);
+            Assert.Equal(Units.Inch, d1.Units);
 
             var d2 = new RTFDocument(297f, 210f, Orientation.Landscape, Units.Millimeters);
-            Assert.Equal(297f, d2.width);
-            Assert.Equal(210f, d2.height);
-            Assert.Equal(Orientation.Landscape, d2.orientation);
-            Assert.Equal(Units.Millimeters, d2.units);
+            Assert.Equal(297f, d2.Width);
+            Assert.Equal(210f, d2.Height);
+            Assert.Equal(Orientation.Landscape, d2.Orientation);
+            Assert.Equal(Units.Millimeters, d2.Units);
 
             var d3 = new RTFDocument(20f, 30f, Orientation.Portrait, Units.Centimeters);
-            Assert.Equal(Units.Centimeters, d3.units);
+            Assert.Equal(Units.Centimeters, d3.Units);
 
             string tempPath = Path.GetTempFileName();
             try
@@ -59,10 +59,10 @@ namespace RTFExporter.test
         {
             var doc = new RTFDocument();
             doc.SetMargin(1.5f, 1.5f, 2.0f, 2.0f);
-            Assert.Equal(1.5f, doc.margin.left);
-            Assert.Equal(1.5f, doc.margin.right);
-            Assert.Equal(2.0f, doc.margin.top);
-            Assert.Equal(2.0f, doc.margin.bottom);
+            Assert.Equal(1.5f, doc.Margin.Left);
+            Assert.Equal(1.5f, doc.Margin.Right);
+            Assert.Equal(2.0f, doc.Margin.Top);
+            Assert.Equal(2.0f, doc.Margin.Bottom);
         }
 
         [Fact]
@@ -75,33 +75,33 @@ namespace RTFExporter.test
 
             var customStyle = new RTFParagraphStyle(Alignment.Center);
             var p2 = doc.AppendParagraph(customStyle);
-            Assert.Same(customStyle, p2.style);
+            Assert.Same(customStyle, p2.Style);
 
             var p3 = doc.AppendParagraph(Alignment.Right);
-            Assert.Equal(Alignment.Right, p3.style.alignment);
+            Assert.Equal(Alignment.Right, p3.Style.Alignment);
 
             var indent = new Indent(0.5f, 1f, 1f);
             var p4 = doc.AppendParagraph(indent);
-            Assert.Equal(Alignment.Left, p4.style.alignment);
-            Assert.Equal(0.5f, p4.style.indent.firstLine);
+            Assert.Equal(Alignment.Left, p4.Style.Alignment);
+            Assert.Equal(0.5f, p4.Style.Indent.FirstLine);
 
             var p5 = doc.AppendParagraph(Alignment.Justified, indent);
-            Assert.Equal(Alignment.Justified, p5.style.alignment);
+            Assert.Equal(Alignment.Justified, p5.Style.Alignment);
 
             var p6 = doc.AppendParagraph(Alignment.Center, indent, 100, 150);
-            Assert.Equal(100, p6.style.spaceBefore);
-            Assert.Equal(150, p6.style.spaceAfter);
+            Assert.Equal(100, p6.Style.SpaceBefore);
+            Assert.Equal(150, p6.Style.SpaceAfter);
 
-            Assert.Equal(6, doc.paragraphs.Count);
+            Assert.Equal(6, doc.Paragraphs.Count);
         }
 
         [Fact]
         public void RTFParser_ToString_GeneratesValidRtfSyntax()
         {
             var doc = new RTFDocument(8.5f, 11f, Orientation.Landscape, Units.Inch);
-            doc.author = "Test Author";
-            doc.version = 2;
-            doc.keywords = new List<string> { "rtf", "test" };
+            doc.Author = "Test Author";
+            doc.Version = 2;
+            doc.Keywords = new List<string> { "rtf", "test" };
 
             var p1 = doc.AppendParagraph(Alignment.Center, new Indent(0f, 0.5f, 0.5f), 120, 240);
             p1.AppendText("Title\nWith Line\tAnd Tab", new RTFTextStyle(
@@ -113,7 +113,7 @@ namespace RTFExporter.test
                 outline: true,
                 fontSize: 16,
                 fontFamily: "Arial",
-                color: Color.red,
+                color: Color.Red,
                 underline: Underline.Double
             ));
 
@@ -123,18 +123,18 @@ namespace RTFExporter.test
                 bold: false,
                 fontSize: 12,
                 fontFamily: "Calibri",
-                color: Color.blue
+                color: Color.Blue
             ));
 
             // Test all underline styles
             var p3 = doc.AppendParagraph();
-            p3.AppendText("Basic").style.underline = Underline.Basic;
-            p3.AppendText("Thick").style.underline = Underline.Thick;
-            p3.AppendText("Words").style.underline = Underline.WordsOnly;
-            p3.AppendText("Wave").style.underline = Underline.Wave;
-            p3.AppendText("Dotted").style.underline = Underline.Dotted;
-            p3.AppendText("Dash").style.underline = Underline.Dash;
-            p3.AppendText("DotDash").style.underline = Underline.DotDash;
+            p3.AppendText("Basic").Style.Underline = Underline.Basic;
+            p3.AppendText("Thick").Style.Underline = Underline.Thick;
+            p3.AppendText("Words").Style.Underline = Underline.WordsOnly;
+            p3.AppendText("Wave").Style.Underline = Underline.Wave;
+            p3.AppendText("Dotted").Style.Underline = Underline.Dotted;
+            p3.AppendText("Dash").Style.Underline = Underline.Dash;
+            p3.AppendText("DotDash").Style.Underline = Underline.DotDash;
 
             string rtf = RTFParser.ToString(doc);
 

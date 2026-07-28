@@ -1,65 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-
 namespace RTFExporter
 {
-  /// <summary>
-  /// Represents document margins (left, right, top, bottom) in current document measurement units.
-  /// </summary>
-  public class Margin
-  {
-    /// <summary>Left margin offset.</summary>
-    public float left;
-
-    /// <summary>Right margin offset.</summary>
-    public float right;
-
-    /// <summary>Top margin offset.</summary>
-    public float top;
-
-    /// <summary>Bottom margin offset.</summary>
-    public float bottom;
-
-    /// <summary>
-    /// Initializes a new instance of the <see cref="Margin"/> class with explicit values for all four sides.
-    /// </summary>
-    /// <param name="left">Left margin offset.</param>
-    /// <param name="right">Right margin offset.</param>
-    /// <param name="top">Top margin offset.</param>
-    /// <param name="bottom">Bottom margin offset.</param>
-    public Margin(float left, float right, float top, float bottom)
-    {
-      this.left = left;
-      this.right = right;
-      this.top = top;
-      this.bottom = bottom;
-    }
-  }
-
-  /// <summary>
-  /// Specifies the page orientation of an RTF document.
-  /// </summary>
-  public enum Orientation
-  {
-    /// <summary>Landscape orientation (<c>\landscape</c>).</summary>
-    Landscape,
-    /// <summary>Portrait orientation (<c>\portrait</c>).</summary>
-    Portrait
-  }
-
-  /// <summary>
-  /// Specifies the measurement units used for document dimensions, margins, and paragraph spacing.
-  /// </summary>
-  public enum Units
-  {
-    /// <summary>Inches (converted to twips at 1440 twips/inch).</summary>
-    Inch,
-    /// <summary>Millimeters.</summary>
-    Millimeters,
-    /// <summary>Centimeters.</summary>
-    Centimeters
-  }
+  using System;
+  using System.Collections.Generic;
+  using System.IO;
 
   /// <summary>
   /// Represents a Rich Text Format (RTF) document. Acts as the root container for paragraphs, color tables, font tables, and document metadata.
@@ -69,48 +12,15 @@ namespace RTFExporter
   /// </remarks>
   public class RTFDocument : IDisposable
   {
-    /// <summary>The sequential collection of <see cref="RTFParagraph"/> blocks in the document.</summary>
-    public List<RTFParagraph> paragraphs = new List<RTFParagraph>();
-
-    /// <summary>The collection of distinct <see cref="Color"/> definitions registered in the document color table.</summary>
-    public List<Color> colors = new List<Color>();
-
-    /// <summary>The collection of distinct font families registered in the document font table.</summary>
-    public List<string> fonts = new List<string>();
-
-    /// <summary>The author name written into the RTF information group (<c>\info \author</c>).</summary>
-    public string author;
-
-    /// <summary>The page width in current document measurement units.</summary>
-    public float width;
-
-    /// <summary>The page height in current document measurement units.</summary>
-    public float height;
-
-    /// <summary>The page <see cref="Orientation"/>.</summary>
-    public Orientation orientation;
-
-    /// <summary>The document <see cref="Margin"/> configuration.</summary>
-    public Margin margin;
-
-    /// <summary>The document measurement <see cref="Units"/>.</summary>
-    public Units units;
-
     private FileStream fileStream;
     private StreamWriter streamWriter;
 
-    /// <summary>The document version number recorded in metadata (<c>\versionN</c>). Defaults to 1.</summary>
-    public int version = 1;
-
-    /// <summary>A list of keywords recorded in the RTF information group (<c>\keywords</c>).</summary>
-    public List<string> keywords = new List<string>();
-
     /// <summary>
-    /// Initializes a new in-memory instance of the <see cref="RTFDocument"/> class with standard 8x11 inch portrait settings.
+    /// Initializes a new instance of the <see cref="RTFDocument"/> class in-memory with standard 8x11 inch portrait settings.
     /// </summary>
     public RTFDocument()
     {
-      Init(8, 11, Orientation.Portrait, Units.Inch);
+      this.Init(8, 11, Orientation.Portrait, Units.Inch);
     }
 
     /// <summary>
@@ -119,8 +29,8 @@ namespace RTFExporter
     /// <param name="path">The destination file path where the RTF file will be saved.</param>
     public RTFDocument(string path)
     {
-      SetFile(path);
-      Init(8, 11, Orientation.Portrait, Units.Inch);
+      this.SetFile(path);
+      this.Init(8, 11, Orientation.Portrait, Units.Inch);
     }
 
     /// <summary>
@@ -129,8 +39,8 @@ namespace RTFExporter
     /// <param name="fileStream">An open file stream with write access.</param>
     public RTFDocument(FileStream fileStream)
     {
-      SetStream(fileStream);
-      Init(8, 11, Orientation.Portrait, Units.Inch);
+      this.SetStream(fileStream);
+      this.Init(8, 11, Orientation.Portrait, Units.Inch);
     }
 
     /// <summary>
@@ -145,8 +55,8 @@ namespace RTFExporter
     /// <seealso cref="RTFExporter.Units"/>
     public RTFDocument(string path, float width = 8, float height = 11, Orientation orientation = Orientation.Portrait, Units units = Units.Inch)
     {
-      SetFile(path);
-      Init(width, height, orientation, units);
+      this.SetFile(path);
+      this.Init(width, height, orientation, units);
     }
 
     /// <summary>
@@ -161,12 +71,12 @@ namespace RTFExporter
     /// <seealso cref="RTFExporter.Units"/>
     public RTFDocument(FileStream fileStream, float width = 8, float height = 11, Orientation orientation = Orientation.Portrait, Units units = Units.Inch)
     {
-      SetStream(fileStream);
-      Init(width, height, orientation, units);
+      this.SetStream(fileStream);
+      this.Init(width, height, orientation, units);
     }
 
     /// <summary>
-    /// Initializes a new in-memory instance of the <see cref="RTFDocument"/> class with customized page parameters.
+    /// Initializes a new instance of the <see cref="RTFDocument"/> class in-memory with customized page parameters.
     /// </summary>
     /// <param name="width">Page width in specified units. Defaults to 8.</param>
     /// <param name="height">Page height in specified units. Defaults to 11.</param>
@@ -176,8 +86,41 @@ namespace RTFExporter
     /// <seealso cref="RTFExporter.Units"/>
     public RTFDocument(float width = 8, float height = 11, Orientation orientation = Orientation.Portrait, Units units = Units.Inch)
     {
-      Init(width, height, orientation, units);
+      this.Init(width, height, orientation, units);
     }
+
+    /// <summary>Gets or sets the sequential collection of <see cref="RTFParagraph"/> blocks in the document.</summary>
+    public List<RTFParagraph> Paragraphs { get; set; }
+
+    /// <summary>Gets or sets the collection of distinct <see cref="Color"/> definitions registered in the document color table.</summary>
+    public List<Color> Colors { get; set; }
+
+    /// <summary>Gets or sets the collection of distinct font families registered in the document font table.</summary>
+    public List<string> Fonts { get; set; }
+
+    /// <summary>Gets or sets the author name written into the RTF information group (<c>\info \author</c>).</summary>
+    public string Author { get; set; }
+
+    /// <summary>Gets or sets the page width in current document measurement units.</summary>
+    public float Width { get; set; }
+
+    /// <summary>Gets or sets the page height in current document measurement units.</summary>
+    public float Height { get; set; }
+
+    /// <summary>Gets or sets the page <see cref="Orientation"/>.</summary>
+    public Orientation Orientation { get; set; }
+
+    /// <summary>Gets or sets the document <see cref="Margin"/> configuration.</summary>
+    public Margin Margin { get; set; }
+
+    /// <summary>Gets or sets the document measurement <see cref="Units"/>.</summary>
+    public Units Units { get; set; }
+
+    /// <summary>Gets or sets the document version number recorded in metadata (<c>\versionN</c>). Defaults to 1.</summary>
+    public int Version { get; set; }
+
+    /// <summary>Gets or sets a list of keywords recorded in the RTF information group (<c>\keywords</c>).</summary>
+    public List<string> Keywords { get; set; }
 
     /// <summary>
     /// Assigns a destination file path and allocates the underlying <see cref="FileStream"/> and <see cref="StreamWriter"/>.
@@ -185,8 +128,8 @@ namespace RTFExporter
     /// <param name="path">The target file path.</param>
     public void SetFile(string path)
     {
-      fileStream = new FileStream(path, FileMode.Create);
-      streamWriter = new StreamWriter(fileStream);
+      this.fileStream = new FileStream(path, FileMode.Create);
+      this.streamWriter = new StreamWriter(this.fileStream);
     }
 
     /// <summary>
@@ -196,7 +139,7 @@ namespace RTFExporter
     public void SetStream(FileStream fileStream)
     {
       this.fileStream = fileStream;
-      streamWriter = new StreamWriter(fileStream);
+      this.streamWriter = new StreamWriter(fileStream);
     }
 
     /// <summary>
@@ -210,21 +153,27 @@ namespace RTFExporter
     /// <seealso cref="RTFExporter.Units"/>
     public void Init(float width, float height, Orientation orientation, Units units)
     {
-      this.width = width;
-      this.height = height;
-      this.orientation = orientation;
-      this.units = units;
+      this.Paragraphs = new List<RTFParagraph>();
+      this.Colors = new List<Color>();
+      this.Fonts = new List<string>();
+      this.Version = 1;
+      this.Keywords = new List<string>();
+
+      this.Width = width;
+      this.Height = height;
+      this.Orientation = orientation;
+      this.Units = units;
 
       switch (units)
       {
         case Units.Inch:
-          margin = new Margin(1, 1, 1, 1);
+          this.Margin = new Margin(1, 1, 1, 1);
           break;
         case Units.Millimeters:
-          margin = new Margin(25.4f, 25.4f, 25.4f, 25.4f);
+          this.Margin = new Margin(25.4f, 25.4f, 25.4f, 25.4f);
           break;
         case Units.Centimeters:
-          margin = new Margin(2.54f, 2.54f, 2.54f, 2.54f);
+          this.Margin = new Margin(2.54f, 2.54f, 2.54f, 2.54f);
           break;
       }
     }
@@ -238,10 +187,10 @@ namespace RTFExporter
     /// <param name="bottom">Bottom margin offset.</param>
     public void SetMargin(float left, float right, float top, float bottom)
     {
-      margin.left = left;
-      margin.right = right;
-      margin.top = top;
-      margin.bottom = bottom;
+      this.Margin.Left = left;
+      this.Margin.Right = right;
+      this.Margin.Top = top;
+      this.Margin.Bottom = bottom;
     }
 
     /// <summary>
@@ -265,7 +214,7 @@ namespace RTFExporter
     public RTFParagraph AppendParagraph(RTFParagraphStyle style)
     {
       RTFParagraph paragraph = new RTFParagraph(this);
-      paragraph.style = style;
+      paragraph.Style = style;
       return paragraph;
     }
 
@@ -279,7 +228,7 @@ namespace RTFExporter
     public RTFParagraph AppendParagraph(Alignment alignment)
     {
       RTFParagraph paragraph = new RTFParagraph(this);
-      paragraph.style = new RTFParagraphStyle(alignment);
+      paragraph.Style = new RTFParagraphStyle(alignment);
       return paragraph;
     }
 
@@ -292,7 +241,7 @@ namespace RTFExporter
     /// <seealso cref="RTFExporter.Indent"/>
     public RTFParagraph AppendParagraph(Indent indent)
     {
-      return AppendParagraph(Alignment.Left, indent);
+      return this.AppendParagraph(Alignment.Left, indent);
     }
 
     /// <summary>
@@ -307,7 +256,7 @@ namespace RTFExporter
     public RTFParagraph AppendParagraph(Alignment alignment, Indent indent)
     {
       RTFParagraph paragraph = new RTFParagraph(this);
-      paragraph.style = new RTFParagraphStyle(alignment, indent);
+      paragraph.Style = new RTFParagraphStyle(alignment, indent);
       return paragraph;
     }
 
@@ -325,7 +274,7 @@ namespace RTFExporter
     public RTFParagraph AppendParagraph(Alignment alignment, Indent indent, int spaceBefore, int spaceAfter)
     {
       RTFParagraph paragraph = new RTFParagraph(this);
-      paragraph.style = new RTFParagraphStyle(alignment, indent, spaceBefore, spaceAfter);
+      paragraph.Style = new RTFParagraphStyle(alignment, indent, spaceBefore, spaceAfter);
       return paragraph;
     }
 
@@ -334,8 +283,8 @@ namespace RTFExporter
     /// </summary>
     public void Close()
     {
-      streamWriter.Close();
-      fileStream.Close();
+      this.streamWriter.Close();
+      this.fileStream.Close();
     }
 
     /// <summary>
@@ -343,7 +292,7 @@ namespace RTFExporter
     /// </summary>
     public void Save()
     {
-      streamWriter.Write(RTFParser.ToString(this));
+      this.streamWriter.Write(RTFParser.ToString(this));
     }
 
     /// <summary>
@@ -351,10 +300,10 @@ namespace RTFExporter
     /// </summary>
     public void Dispose()
     {
-      if (fileStream != null && streamWriter != null)
+      if (this.fileStream != null && this.streamWriter != null)
       {
-        Save();
-        Close();
+        this.Save();
+        this.Close();
       }
     }
   }

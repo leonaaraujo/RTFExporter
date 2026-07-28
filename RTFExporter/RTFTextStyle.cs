@@ -1,65 +1,10 @@
 namespace RTFExporter
 {
   /// <summary>
-  /// Specifies the style of underline applied to an RTF text run.
-  /// </summary>
-  public enum Underline
-  {
-    /// <summary>No underline (<c>\ul0</c>).</summary>
-    None,
-    /// <summary>Standard single line underline (<c>\ul</c>).</summary>
-    Basic,
-    /// <summary>Double line underline (<c>\uldb</c>).</summary>
-    Double,
-    /// <summary>Thick line underline (<c>\ulth</c>).</summary>
-    Thick,
-    /// <summary>Underline applied to words only, skipping spaces (<c>\ulw</c>).</summary>
-    WordsOnly,
-    /// <summary>Wavy underline (<c>\ulwave</c>).</summary>
-    Wave,
-    /// <summary>Dotted underline (<c>\uld</c>).</summary>
-    Dotted,
-    /// <summary>Dashed underline (<c>\uldash</c>).</summary>
-    Dash,
-    /// <summary>Dot-dash underline (<c>\uldashd</c>).</summary>
-    DotDash
-  }
-
-  /// <summary>
   /// Represents character-level styling options for text runs inside an RTF document.
   /// </summary>
   public class RTFTextStyle
   {
-    /// <summary>Indicates whether the text is italicized (<c>\i</c>).</summary>
-    public bool italic;
-
-    /// <summary>Indicates whether the text is bolded (<c>\b</c>).</summary>
-    public bool bold;
-
-    /// <summary>Indicates whether small caps formatting is enabled (<c>\scaps</c>).</summary>
-    public bool smallCaps;
-
-    /// <summary>Indicates whether strikethrough formatting is enabled (<c>\strike</c>).</summary>
-    public bool strikeThrough;
-
-    /// <summary>Indicates whether all capitals formatting is enabled (<c>\caps</c>).</summary>
-    public bool allCaps;
-
-    /// <summary>Indicates whether outline formatting is enabled (<c>\outl</c>).</summary>
-    public bool outline;
-
-    /// <summary>The font size in typographical points (e.g., 12 for 12pt). Converted internally to half-points (<c>\fs</c>) during export.</summary>
-    public int fontSize;
-
-    /// <summary>The name of the font family (e.g., "Calibri", "Arial", "Courier").</summary>
-    public string fontFamily;
-
-    /// <summary>The foreground text color.</summary>
-    public Color color;
-
-    /// <summary>The underline formatting style applied to the text.</summary>
-    public Underline underline;
-
     /// <summary>
     /// Initializes a new instance of the <see cref="RTFTextStyle"/> class with basic font and color settings.
     /// </summary>
@@ -71,15 +16,15 @@ namespace RTFExporter
     /// <seealso cref="RTFExporter.Color"/>
     public RTFTextStyle(bool italic, bool bold, int fontSize, string fontFamily, Color color)
     {
-      this.italic = italic;
-      this.bold = bold;
-      this.fontSize = fontSize;
-      this.fontFamily = fontFamily;
-      this.color = color;
+      this.Italic = italic;
+      this.Bold = bold;
+      this.FontSize = fontSize;
+      this.FontFamily = fontFamily;
+      this.Color = color;
     }
 
     /// <summary>
-    /// Initializes a comprehensive instance of the <see cref="RTFTextStyle"/> class with all character styling options.
+    /// Initializes a new instance of the <see cref="RTFTextStyle"/> class comprehensive with all character styling options.
     /// </summary>
     /// <param name="italic">Set to <c>true</c> to enable italic styling.</param>
     /// <param name="bold">Set to <c>true</c> to enable bold styling.</param>
@@ -93,19 +38,58 @@ namespace RTFExporter
     /// <param name="underline">The <see cref="Underline"/> formatting style.</param>
     /// <seealso cref="RTFExporter.Color"/>
     /// <seealso cref="RTFExporter.Underline"/>
-    public RTFTextStyle(bool italic, bool bold, bool smallCaps, bool strikeThrough, bool allCaps,
-      bool outline, int fontSize, string fontFamily, Color color, Underline underline)
+    public RTFTextStyle(
+      bool italic,
+      bool bold,
+      bool smallCaps,
+      bool strikeThrough,
+      bool allCaps,
+      bool outline,
+      int fontSize,
+      string fontFamily,
+      Color color,
+      Underline underline)
     {
-      this.italic = italic;
-      this.bold = bold;
-      this.smallCaps = smallCaps;
-      this.strikeThrough = strikeThrough;
-      this.allCaps = allCaps;
-      this.outline = outline;
-      this.fontSize = fontSize;
-      this.fontFamily = fontFamily;
-      this.color = color;
-      this.underline = underline;
+      this.Italic = italic;
+      this.Bold = bold;
+      this.SmallCaps = smallCaps;
+      this.StrikeThrough = strikeThrough;
+      this.AllCaps = allCaps;
+      this.Outline = outline;
+      this.FontSize = fontSize;
+      this.FontFamily = fontFamily;
+      this.Color = color;
+      this.Underline = underline;
     }
+
+    /// <summary>Gets or sets a value indicating whether the text is italicized (<c>\i</c>).</summary>
+    public bool Italic { get; set; }
+
+    /// <summary>Gets or sets a value indicating whether the text is bolded indicates whether (<c>\b</c>).</summary>
+    public bool Bold { get; set; }
+
+    /// <summary>Gets or sets a value indicating whether small caps formatting is enabled (<c>\scaps</c>).</summary>
+    public bool SmallCaps { get; set; }
+
+    /// <summary>Gets or sets a value indicating whether strikethrough formatting is enabled (<c>\strike</c>).</summary>
+    public bool StrikeThrough { get; set; }
+
+    /// <summary>Gets or sets a value indicating whether all capitals formatting is enabled (<c>\caps</c>).</summary>
+    public bool AllCaps { get; set; }
+
+    /// <summary>Gets or sets a value indicating whether outline formatting is enabled (<c>\outl</c>).</summary>
+    public bool Outline { get; set; }
+
+    /// <summary>Gets or sets the font size in typographical points (e.g., 12 for 12pt). Converted internally to half-points (<c>\fs</c>) during export.</summary>
+    public int FontSize { get; set; }
+
+    /// <summary>Gets or sets the name of the font family (e.g., "Calibri", "Arial", "Courier").</summary>
+    public string FontFamily { get; set; }
+
+    /// <summary>Gets or sets the foreground text color.</summary>
+    public Color Color { get; set; }
+
+    /// <summary>Gets or sets the underline formatting style applied to the text.</summary>
+    public Underline Underline { get; set; }
   }
 }

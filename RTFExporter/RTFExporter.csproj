@@ -20,7 +20,16 @@
         <PackageReleaseNotes>chore: Copyright update.</PackageReleaseNotes>
         <PackageTags>rtf;rich;text;doc;docx;word;string</PackageTags>
         <LangVersion>4</LangVersion>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <NoWarn>$(NoWarn);SA1633</NoWarn>
     </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.556">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
 
     <ItemGroup>
         <None Include="..\LICENSE.md" Pack="true" PackagePath=""/>
